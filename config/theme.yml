@@ -1,0 +1,19 @@
+parent: classic
+assets:
+  css:
+    all:
+      - id: custom-style
+        path: assets/css/custom.css
+        priority: 1000
+  js:
+    all:
+      - id: custom-script
+      - path: assets/js/menu-enhanced.js
+        priority: 1000
+name: TGM_CustomTheme
+display_name: TGM Custom Theme
+version: 1.0.0
+author:
+  name: "Ilaria Pace (TGM Team)"
+  email: "ilaria.pace@tgm-commerce.fr"
+  url: "https://www.tgm-commerce.fr"

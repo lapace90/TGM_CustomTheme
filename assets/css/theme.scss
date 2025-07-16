@@ -1,0 +1,89 @@
+// // Variables dans /assets/css/theme.scss
+// :root {
+//   --primary: #437db8;      // Violet moderne
+//   --secondary: #FF6B6B;    // Corail pour les accents
+//   --dark: #2D3436;         // Gris foncé pour les textes
+//   --light: #F7F7F7;        // Gris très clair pour les fonds
+//   --white: #FFFFFF;
+//   --success: #26de81;      // Vert pour validation
+// }
+
+// // Header épuré avec ombre subtile
+// #header {
+//   background: var(--white);
+//   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  
+//   .logo {
+//     img {
+//       max-height: 40px;
+//     }
+//   }
+  
+//   // Menu avec hover sympa
+//   #top-menu {
+//     a {
+//       color: var(--dark);
+//       font-weight: 500;
+//       transition: all 0.3s ease;
+      
+//       &:hover {
+//         color: var(--primary);
+//         transform: translateY(-2px);
+//       }
+//     }
+//   }
+// }
+
+// // Cartes produits minimalistes
+// .product-miniature {
+//   border: none;
+//   border-radius: 8px;
+//   overflow: hidden;
+//   transition: all 0.3s ease;
+//   background: var(--white);
+  
+//   &:hover {
+//     box-shadow: 0 5px 20px rgba(108, 99, 255, 0.15);
+//     transform: translateY(-3px);
+    
+//     .product-thumbnail img {
+//       transform: scale(1.05);
+//     }
+//   }
+  
+//   .product-thumbnail {
+//     overflow: hidden;
+    
+//     img {
+//       transition: transform 0.3s ease;
+//     }
+//   }
+  
+//   .product-title {
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: var(--dark);
+//   }
+  
+//   .product-price {
+//     color: var(--primary);
+//     font-weight: 700;
+//     font-size: 18px;
+//   }
+// }
+
+// .btn-primary {
+//   background: var(--primary);
+//   border: none;
+//   padding: 12px 24px;
+//   border-radius: 25px;
+//   font-weight: 600;
+//   transition: all 0.3s ease;
+  
+//   &:hover {
+//     background: darken(#437db8, 10%);
+//     transform: translateY(-2px);
+//     box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+//   }
+// }
+

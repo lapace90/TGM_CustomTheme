@@ -1,0 +1,1046 @@
+/* ===================================
+   TGM CUSTOM THEME - RÉVOLUTION DESIGN
+   Style: Glassmorphism + Dark Mode + Néon
+   =================================== */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap");
+
+/* Variables pour thème futuriste */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1f1f38;
+  --bg-glass: rgba(0, 0, 0, 0.7);
+  --bg-glass-mid: rgba(0, 0, 0, 0.3);
+  --bg-glass-light: rgba(255, 255, 255, 0.15);
+  --neon-blue: #00f5ff;
+  --neon-pink: #ff0080;
+  --neon-purple: #8b00ff;
+  --neon-green: #00ff41;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-contrast: #f8f8f8;
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-neon: 0 0 20px var(--neon-blue);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
+  --text-shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  --text-light: #7f8c8d;
+}
+
+/* ===== RESET ET BASE FUTURISTE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body #wrapper {
+  background: var(--bg-primary);
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(139, 0, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(0, 245, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(255, 0, 128, 0.1) 0%,
+      transparent 50%
+    );
+  background-attachment: fixed;
+  color: var(--text-contrast);
+  font-family: "Rajdhani", sans-serif;
+  overflow-x: hidden;
+  /* font-weight: 400; */
+}
+
+/* Textes importants avec meilleur contraste */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-contrast);
+  /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9); */
+  font-weight: 600;
+}
+
+p,
+span,
+div,
+a {
+  color: var(--text-contrast);
+}
+
+/* Animation de particules en arrière-plan */
+body #wrapper ::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      2px 2px at 20px 30px,
+      var(--neon-blue),
+      transparent
+    ),
+    radial-gradient(2px 2px at 40px 70px, var(--neon-pink), transparent),
+    radial-gradient(1px 1px at 90px 40px, var(--neon-green), transparent);
+  background-repeat: repeat;
+  background-size: 550px 550px;
+  animation: sparkle 20s linear infinite;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+@keyframes sparkle {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-550px);
+  }
+}
+
+/* ===== HEADER FUTURISTE ===== */
+#header .header-nav {
+  
+  border-bottom: #f6f6f6 2px solid;
+  background: #53538a8c;
+  border-top: 1px solid var(--glass-border);
+  height: 85px;
+}
+
+.header-top {
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+  padding: 5px 0;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: pulse 4s infinite;
+}
+
+#header a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+#header a:hover {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+#header .header-nav .blockcart {
+  background: transparent;
+  backdrop-filter: blur(15px);
+  color: var(--text-contrast) !important;
+  height: 45px;
+}
+
+#header .header-nav .blockcart a {
+  color: var(--text-contrast) !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+#header .header-nav .blockcart a:hover {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 15px var(--neon-blue);
+}
+
+#header .header-nav .blockcart .cart-products-count {
+  background: var(--neon-blue);
+  color: var(--text-primary);
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.shopping-cart {
+  color: var(--neon-blue) !important;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1px; /* ajuste finement la hauteur */
+}
+
+/* Aligner icône panier, texte et badge */
+#header .blockcart {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  height: auto;
+}
+
+/* Lien du panier */
+#header .blockcart a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px;
+  padding: 5px 10px;
+}
+
+/* Menu navigation cyberpunk */
+.main-menu {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.main-menu .category {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-menu .category a {
+  color: var(--text-contrast) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-menu .category a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neon-blue),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.main-menu .category a:hover::before {
+  left: 100%;
+}
+
+.main-menu .category a:hover {
+  color: var(--text-contrast) !important;
+  text-shadow: 0 0 15px var(--neon-blue), 2px 2px 6px rgba(0, 0, 0, 0.9) !important;
+  background: rgba(0, 245, 255, 0.2);
+}
+
+/* Breadcrumb futuriste */
+#wrapper .breadcrumb {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  animation: pulse 4s infinite;
+  border-radius: 10px;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-glass);
+}
+#wrapper .breadcrumb a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+#wrapper .breadcrumb a:hover {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+#wrapper .breadcrumb .active {
+  color: var(--text-secondary) !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Barre de recherche futuriste */
+#search_widget {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+}
+#search_widget input {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: var(--text-contrast) !important;
+  padding: 15px 20px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+}
+#search_widget input::placeholder {
+  color: var(--text-secondary) !important;
+}
+#search_widget button {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  border: none;
+  color: var(--text-contrast) !important;
+  padding: 15px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+#search_widget button:hover {
+  box-shadow: 0 0 30px var(--neon-blue);
+}
+
+/* ===== BOUTONS NÉON ===== */
+.btn-primary {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  color: var(--text-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 50px var(--neon-blue);
+}
+
+/* ===== CARTES PRODUITS GLASSMORPHISM ===== */
+.product-miniature {
+  background-color: transparent;
+  padding: 0.7rem;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-glass);
+}
+
+/* Amélioration du contraste pour les textes produits */
+.product-miniature h3,
+.product-miniature .product-title,
+.product-miniature .product-title a {
+  color: var(--text-contrast) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.product-miniature .product-description,
+.product-miniature .product-reference {
+  color: var(--text-secondary) !important;
+  background-color: var(--bg-glass-mid);
+  border-radius: 8px;
+  margin: 0;
+  padding-bottom: 0.8rem;
+}
+
+.product-miniature::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-pink),
+    var(--neon-blue)
+  );
+  animation: rotate 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.product-miniature:hover::before {
+  opacity: 0.1;
+}
+
+.product-miniature:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.quick-view {
+  border: 1px solid var(--glass-border);
+  color: var(--neon-blue);
+  text-shadow: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Image produit */
+.product-miniature .thumbnail {
+  overflow: hidden;
+}
+
+.product-miniature .thumbnail-container {
+  border-radius: 20px;
+  margin: auto;
+}
+
+.product-miniature .thumbnail::after {
+  content: "";
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.thumbnail-top {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.product-miniature:hover .thumbnail::after {
+  left: 100%;
+}
+.product-miniature:hover .thumbnail::after {
+  left: 100%;
+}
+
+.highlighted-informations {
+  position: absolute;
+  z-index: 10;
+}
+
+.js-product {
+  padding: 0.5rem;
+}
+
+/* Prix néon */
+.price {
+  font-family: "Orbitron", monospace;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--neon-blue);
+  color: white;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--neon-blue);
+  }
+  to {
+    text-shadow: 0 0 20px var(--neon-blue);
+  }
+}
+
+/* ===== FOOTER CYBERPUNK ===== */
+#footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-pink),
+    var(--neon-blue)
+  );
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.footer-container .h3,
+.footer-container .h4 {
+  color: var(--neon-blue);
+  font-family: "Orbitron", monospace;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+#block_myaccount_infos .myaccount-title a {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+#block_myaccount_infos .myaccount-title a:hover {
+  color: var(--neon-green);
+  text-shadow: 0 0 20px var(--neon-blue);
+  transition: ease-in-out, 0.5s;
+}
+
+/* ===== FILTRES ===== */
+#search_filters .facet .facet-label a {
+  color: var(--bg-secondary);
+  text-shadow: none;
+}
+#search_filters .facet .facet-title {
+  text-shadow: none;
+}
+
+.magnitude {
+  padding: 10px;
+  color: var(--text-shadow-strong);
+  text-shadow: none;
+}
+
+/* ===== EFFETS SPÉCIAUX ===== */
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--neon-blue);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 20px var(--neon-blue);
+  animation: cursor 0.5s infinite alternate;
+}
+
+@keyframes cursor {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+/* Barre de recherche futuriste */
+#search_widget {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+}
+
+#search_widget input {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: var(--text-contrast) !important;
+  padding: 15px 20px;
+  font-family: "Rajdhani", sans-serif;
+
+  font-weight: 500;
+}
+
+#search_widget input::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+#search_widget button {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  border: none;
+  color: var(--text-contrast) !important;
+  padding: 15px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#search_widget button:hover {
+  box-shadow: 0 0 30px var(--neon-blue);
+}
+
+/* ===== FORMULAIRES ===== */
+.form-control,
+input,
+textarea,
+select {
+  background: var(--bg-glass) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 10px !important;
+  color: var(--text-contrast) !important;
+  padding: 12px 15px !important;
+
+  backdrop-filter: blur(10px);
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+/* Labels de formulaire */
+label {
+  color: var(--glass-border);
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+/* ===== TABLEAUX ET LISTES ===== */
+table,
+.table {
+  background: var(--bg-glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+td,
+th {
+  color: var(--text-contrast) !important;
+  border-color: var(--glass-border) !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.4) !important;
+  font-weight: 600 !important;
+}
+
+/* Listes */
+ul,
+ol,
+li {
+  color: var(--text-contrast) !important;
+}
+
+/* ===== NOTIFICATIONS HOLOGRAPHIQUES ===== */
+.alert {
+  background: var(--bg-glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-glass);
+}
+
+.alert-success {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+}
+
+.alert-danger {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.3);
+}
+
+/* ===== RESPONSIVE FUTURISTE ===== */
+@media (max-width: 768px) {
+  body::before {
+    animation-duration: 10s;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .product-miniature {
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== ANIMATIONS AVANCÉES ===== */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Effet Matrix sur le texte */
+.matrix-text {
+  animation: matrix 3s infinite;
+}
+
+@keyframes matrix {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+/* ===== FIX DÉFINITIF - ICÔNES ATTACHÉES AU LIEN ===== */
+
+/* Structure PrestaShop : lien + icône + contenu déroulant */
+/* Il faut "remonter" l'icône dans le lien visuellement */
+
+/* Container principal du menu */
+.category-sub-menu li {
+  position: relative;
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+/* ===== LIENS PRINCIPAUX ===== */
+.category-sub-menu > li > a,
+.category-sub-link {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  color: var(--text-contrast) !important;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8) !important;
+  padding: 12px 45px 12px 15px; /* Espace pour l'icône */
+  display: block;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 4s infinite;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+/* ===== REPOSITIONNER L'ICÔNE "VISUELLEMENT" DANS LE LIEN ===== */
+
+/* L'icône qui suit immédiatement le lien */
+.category-sub-link + .arrows,
+.category-sub-link + .navbar-toggler,
+.category-sub-link + .collapse-icons,
+a + .arrows,
+a + .navbar-toggler,
+a + .collapse-icons {
+  position: absolute !important;
+  top: 0 !important; /* Remonter au niveau du lien */
+  right: 15px !important;
+  margin-top: 12px !important; /* Centrer dans le lien */
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  font-size: 18px !important;
+  cursor: pointer;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+}
+
+/* Icônes Material */
+.arrows .material-icons,
+.navbar-toggler .material-icons,
+.collapse-icons .material-icons {
+  color: white !important;
+  font-size: 18px !important;
+  line-height: 1;
+}
+
+.pagination > div:first-child,
+.total-products p,
+.products-selection .sort-by-row .sort-by {
+  margin-top: 20px;
+  
+  text-shadow: none !important;
+}
+/* Le contenu déroulant commence APRÈS le lien, pas après l'icône */
+.popover .sub-menu .js-sub-menu .collapse {
+  position: relative !important;
+  z-index: 5 !important;
+  margin-top: 0 !important;
+  clear: both !important;
+}
+
+/* ===== HIÉRARCHIE DES NIVEAUX ===== */
+
+/* Niveau 1 */
+li[data-depth="1"] {
+  margin-left: 20px;
+}
+
+li[data-depth="1"] > a,
+li[data-depth="1"] > .category-sub-link {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 110, 255, 0.884),
+    rgba(0, 245, 255, 0.3)
+  );
+  border-left: 3px solid var(--neon-blue);
+  padding: 8px 35px 8px 12px; /* Moins d'espace à droite */
+  border-radius: 5px;
+  font-size: 0.95em;
+  font-weight: 500;
+  text-transform: none;
+  animation: none;
+}
+
+/* Icônes niveau 1 */
+li[data-depth="1"] .arrows {
+  margin-top: 8px !important;
+  font-size: 16px !important;
+}
+
+/* Niveau 2 */
+li[data-depth="2"] {
+  margin-left: 35px;
+}
+
+li[data-depth="2"] > a,
+li[data-depth="2"] > .category-sub-link {
+  background: linear-gradient(
+    90deg,
+    rgba(140, 0, 255, 0.795),
+    rgba(139, 0, 255, 0.25)
+  );
+  border-left: 2px solid var(--neon-purple);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: none;
+  animation: none;
+}
+
+/* Niveau 3 */
+li[data-depth="3"] {
+  margin-left: 50px;
+}
+
+li[data-depth="3"] > a,
+li[data-depth="3"] > .category-sub-link {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 128, 0.1),
+    rgba(255, 0, 128, 0.02)
+  );
+  border-left: 1px solid var(--neon-pink);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 300;
+  text-transform: none;
+  animation: none;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.category-sub-link:hover,
+.category-sub-menu a:hover {
+  transform: translateX(3px);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+}
+
+/* ===== SUPPRIMER LES LIGNES ===== */
+li[data-depth="1"]:before,
+li[data-depth="2"]:before,
+li[data-depth="3"]:before {
+  display: none !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  li[data-depth="1"] {
+    margin-left: 15px;
+  }
+  li[data-depth="2"] {
+    margin-left: 25px;
+  }
+  li[data-depth="3"] {
+    margin-left: 35px;
+  }
+
+  .arrows,
+  .navbar-toggler,
+  .collapse-icons {
+    right: 10px !important;
+    margin-top: 10px !important;
+    font-size: 16px !important;
+  }
+}
+
+.block_newsletter {
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.search-widgets {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  font-size: 1.1rem;
+}
+
+.wishlist-button-add:hover {
+ 
+  box-shadow: 0 0 10px var(--neon-pink);
+}
+.wishlist-button-add i {
+  color: var(--neon-pink) !important;
+}
+
+/* ===== FORMULAIRE CLIENT - STYLE SIMPLE ===== */
+
+#customer-form {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(15px);
+  box-shadow: var(--shadow-glass);
+  width: 100%;
+  margin: 2rem auto;
+}
+
+/* Labels */
+#customer-form label {
+  color: var(--neon-blue) !important;
+  font-weight: 600 !important;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* Champs de saisie */
+#customer-form .form-control,
+#customer-form input,
+#customer-form select,
+#customer-form textarea {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 10px !important;
+  color: var(--text-contrast) !important;
+  padding: 12px 15px !important;
+}
+
+#customer-form .form-control:focus,
+#customer-form input:focus,
+#customer-form select:focus {
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
+  outline: none !important;
+}
+
+/* Bouton */
+#customer-form .btn-primary {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)) !important;
+  border: none !important;
+  border-radius: 15px !important;
+  padding: 12px 30px !important;
+  color: white !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease;
+}
+
+#customer-form .btn-primary:hover {
+  box-shadow: 0 0 25px var(--neon-blue);
+  transform: translateY(-2px);
+}
+
+/* Supprimer les bordures de validation moches */
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-control:invalid {
+  border-color: var(--glass-border) !important;
+  box-shadow: none !important;
+}
+
+.btn-show {
+  box-shadow: none !important;
+  border-radius: 10px;
+  line-height: 1.8 !important;
+  margin-left: 5px !important;
+}
+
+.invalid-feedback,
+.form-control-comment,
+.help-block {
+  display: none !important;
+}
+
+/* Enlever toutes les bordures roses de validation */
+*[style*="border"]:not(.btn) {
+  border: 1px solid var(--glass-border) !important;
+}
+
+/* Reset des styles de validation Bootstrap */
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border-color: var(--glass-border) !important;
+  box-shadow: none !important;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: var(--glass-border) !important;
+  box-shadow: none !important;
+}
