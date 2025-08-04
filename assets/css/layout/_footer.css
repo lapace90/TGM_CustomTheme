@@ -1,0 +1,103 @@
+/* ===== FOOTER CYBERPUNK ===== */
+#footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ligne animée en haut du footer */
+#footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-pink),
+    var(--neon-blue)
+  );
+  animation: scan 3s linear infinite;
+}
+
+/* Titres du footer */
+.sitemap h2,
+.footer-container .h3,
+.footer-container .h4 {
+  color: var(--neon-blue);
+  font-family: var(--font-family-monospace);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--neon-blue);
+  align-self: center;
+}
+
+/* Section mon compte */
+.footer-container #block_myaccount_infos .myaccount-title a {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 10px var(--neon-blue) !important;
+  text-decoration: none;
+  font-weight: 600 !important;
+  transition: color 0.3s ease !important;
+  font-family: var(--font-family-monospace) !important;
+}
+
+.footer-container #block_myaccount_infos .myaccount-title a:hover {
+  color: var(--neon-green) !important;
+  text-shadow: 0 0 20px var(--neon-blue) !important;
+  transition: ease-in-out, 0.5s !important;
+}
+
+/* Texte centré du footer */
+#footer li .text-sm-center {
+  color: var(--text-secondary);
+  font-size: 0.9em !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+
+/* Liens du footer */
+#footer .links a {
+  box-shadow: none !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  color: #f8f8f8 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+#footer .links a:hover {
+  transform: translateY(-1px) scale(1.01) !important;
+  color: orange !important;
+  text-shadow: none !important;
+}
+
+/* Newsletter */
+#blockEmailSubscription_displayFooterBefore {
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+#footer .block_newsletter p {
+  text-shadow: none;
+}
+
+#footer .block_newsletter form input[type="email"] {
+  border: 1px solid var(--bg-glass-light) !important;
+  background: var(--text-contrast) !important;
+  border-radius: 10px !important;
+  color: var(--bg-primary) !important;
+  text-shadow: none !important;
+}
+
+#footer .block_newsletter form input[type="email"]::placeholder {
+  color: var(--text-light) !important;
+  text-shadow: none !important;
+}

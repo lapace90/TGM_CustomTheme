@@ -1,0 +1,119 @@
+/* ===== FORMULAIRES CYBERPUNK ===== */
+
+/* Formulaire client */
+#customer-form {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(15px);
+  box-shadow: var(--shadow-glass);
+  width: 100%;
+  margin: 2rem auto;
+}
+
+/* Labels */
+#customer-form label,
+form label {
+  color: var(--neon-blue) !important;
+  font-weight: 600 !important;
+  font-family: var(--font-family-sans-serif);
+}
+
+/* Champs de saisie généraux */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 10px !important;
+  color: var(--text-contrast) !important;
+  
+  transition: var(--transition-default);
+}
+
+/* Focus sur les champs */
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
+  outline: none !important;
+}
+
+/* Formulaire client spécifique */
+#customer-form .form-control,
+#customer-form input,
+#customer-form select,
+#customer-form textarea {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 10px !important;
+  color: var(--text-contrast) !important;
+  
+}
+
+#customer-form .form-control:focus,
+#customer-form input:focus,
+#customer-form select:focus {
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
+  outline: none !important;
+}
+
+/* Boutons dans les formulaires */
+#customer-form .btn-primary:hover {
+  box-shadow: 0 0 25px var(--neon-blue);
+  transform: translateY(-2px);
+}
+
+/* Bouton show/hide password */
+.btn-show {
+  box-shadow: none !important;
+  border-radius: 10px;
+  line-height: 1.8 !important;
+  margin-left: 5px !important;
+}
+
+/* Messages de validation */
+.invalid-feedback,
+.form-control-comment,
+.help-block {
+  display: none !important;
+}
+
+/* Enlever les bordures de validation */
+*[style*="border"]:not(.btn) {
+  border: 1px solid var(--glass-border) !important;
+}
+
+/* Reset des styles de validation Bootstrap */
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border-color: var(--glass-border) !important;
+  box-shadow: none !important;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: var(--glass-border) !important;
+  box-shadow: none !important;
+}
+
+/* Barre de recherche du header (déjà dans header.css mais pour cohérence) */
+input[type="search"] {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  color: var(--text-contrast) !important;
+  padding: 12px 20px;
+}
+
+input[type="search"]::placeholder {
+  color: var(--text-secondary) !important;
+}

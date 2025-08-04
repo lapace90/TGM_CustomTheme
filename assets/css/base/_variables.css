@@ -1,0 +1,42 @@
+/* ===================================
+   VARIABLES GLOBALES DU THÈME
+   =================================== */
+
+:root {
+  /* Couleurs de fond */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #383855;
+  --bg-glass: rgba(0, 0, 0, 0.7);
+  --bg-glass-mid: rgba(0, 0, 0, 0.3);
+  --bg-glass-light: rgba(255, 255, 255, 0.15);
+  
+  /* Couleurs néon */
+  --neon-blue: #00f5ff;
+  --neon-pink: #ff0080;
+  --neon-purple: #8b00ff;
+  --neon-green: #00ff41;
+  
+  /* Couleurs de texte */
+  --text-primary: #0a0a0a;
+  --text-secondary: #e0e0e0;
+  --text-contrast: #f8f8f8;
+  --text-light: #7f8c8d;
+  
+  /* Bordures et effets */
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-neon: 0 0 20px var(--neon-blue);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
+  --text-shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  
+  /* Layout */
+  --radius-primary: 15px;
+  
+  /* Typographie */
+  --font-family-sans-serif: "Rajdhani", sans-serif;
+  --font-family-monospace: "Orbitron", monospace;
+  
+  /* Transitions */
+  --transition-default: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+  --transition-fast: all 0.2s ease;
+}

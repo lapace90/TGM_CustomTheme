@@ -1,0 +1,131 @@
+/* ===== PAGE LISTE PRODUITS ===== */
+
+/* Container principal */
+#js-product-list {
+  background-color: var(--text-contrast) !important;
+  padding: 30px;
+  border-radius: var(--radius-primary);
+  margin-bottom: 2rem;
+}
+
+/* Header de la liste */
+#js-product-list-header {
+  color: var(--text-contrast);
+  font-family: var(--font-family-monospace);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Tri et sélection */
+.products-selection {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--bg-glass-light) !important;
+  border-radius: var(--radius-primary);
+  backdrop-filter: blur(10px);
+}
+
+.products-selection .sort-by-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
+}
+
+.products-selection .sort-by-row .sort-by {
+  margin-top: 20px;
+  text-shadow: none !important;
+}
+
+/* Nombre total de produits */
+.total-products p {
+  margin-top: 20px;
+  text-shadow: none !important;
+  color: var(--text-contrast);
+  font-weight: 500;
+}
+
+/* Select de tri */
+.products-selection select {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: var(--text-contrast);
+  padding: 8px 15px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.pagination > div:first-child {
+  margin-top: 20px;
+  text-shadow: none !important;
+}
+
+.pagination .page-link {
+  background: var(--bg-glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-contrast);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: var(--transition-default);
+}
+
+.pagination .page-link:hover {
+  background: rgba(0, 245, 255, 0.2);
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.pagination .active .page-link {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  border-color: transparent;
+  color: var(--text-contrast);
+}
+
+/* Vue grille/liste */
+.products-sort-order {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.products-sort-order .btn-unstyle {
+  background: none;
+  border: 1px solid var(--glass-border);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--text-contrast);
+  transition: var(--transition-default);
+}
+
+.products-sort-order .btn-unstyle:hover {
+  border-color: var(--neon-blue);
+  color: var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.products-sort-order .btn-unstyle.active {
+  background: var(--neon-blue);
+  color: var(--bg-primary);
+  border-color: var(--neon-blue);
+}
+
+/* Categories */
+
+#subcategories {
+  background-color: var(--bg-glass-light) !important;
+}
+
+.subcategories-list {
+  display: flex;
+  justify-content: space-around;
+}

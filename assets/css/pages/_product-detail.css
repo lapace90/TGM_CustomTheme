@@ -1,0 +1,123 @@
+/* ===== PAGE DÉTAIL PRODUIT ===== */
+#main .product-detail {
+  background-color: var(--bg-glass-mid);
+  padding: 2rem;
+  border-radius: var(--radius-primary);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-glass);
+  margin-bottom: 2rem;
+}
+
+/* Conteneur principal des détails du produit */
+.product-cover {
+  position: relative;
+  border-radius: var(--radius-primary);;
+  overflow: hidden;
+  box-shadow: var(--shadow-glass);
+}
+
+/* Image principale du produit */
+.product-cover img {
+  border-radius: var(--radius-primary);;
+  transition: transform 0.4s ease;
+}
+
+.product-cover:hover img {
+  transform: scale(1.02);
+}
+
+/* Informations du produit */
+.product-information {
+  background-color: var(--bg-secondary);
+  color: var(--text-contrast);
+  margin-top: 1rem;
+  padding: 1.2rem;
+  border-radius: var(--radius-primary);;
+  box-shadow: var(--shadow-glass);
+}
+
+/* Titre du produit */
+h1.product-title {
+  color: var(--text-contrast);
+  font-weight: 700;
+  text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* Prix du produit */
+.product-price {
+  font-family: var(--font-family-monospace);
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+  animation: glow 2s infinite alternate;
+}
+
+/* Description du produit */
+.product-description {
+  color: var(--text-secondary);
+  background-color: var(--bg-glass-light);
+  border-radius: 10px;
+}
+
+/* Bouton d'ajout au panier */
+.add-to-cart {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  border: none;
+  color: var(--text-contrast) !;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon-pink);
+}
+
+/* Quantité */
+.product-quantity {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  color: var(--text-contrast);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* Avis et notes */
+.product-reviews {
+  background-color: var(--bg-glass);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* Animation de l'effet néon */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--neon-blue);
+  }
+  to {
+    text-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-purple);
+  }
+}
+
+.blockreassurance_product, .tabs, .product-comment-list-item {
+  background-color: var(--text-contrast);
+  padding: 0.8rem;
+  border-radius: var(--radius-primary);
+}
+
+.blockreassurance_product .item-product {
+  padding: 0 !important;
+  width: 40px;
+}
+
+.product-prices div {
+margin-bottom: 0 !important;
+}
+
+.current-price-value {
+    font-size: 2rem !important;
+}

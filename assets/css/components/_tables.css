@@ -1,0 +1,83 @@
+/* ===== TABLEAUX ET LISTES ===== */
+
+/* Tableaux */
+table,
+.table {
+  background: var(--bg-glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Cellules */
+td,
+th {
+  color: var(--text-contrast) !important;
+  border-color: var(--glass-border) !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/* En-têtes */
+th {
+  background: rgba(0, 0, 0, 0.4) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+}
+
+/* Lignes alternées */
+tbody tr:nth-child(even) td {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Hover sur les lignes */
+tbody tr:hover td {
+  background: rgba(0, 245, 255, 0.1) !important;
+  transition: var(--transition-default);
+}
+
+/* Tableaux responsifs */
+.table-responsive {
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+/* Tableaux striped */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Tableaux bordered */
+.table-bordered {
+  border: 1px solid var(--glass-border);
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid var(--glass-border);
+}
+
+/* Classes d'état */
+.table-success {
+  background-color: rgba(0, 255, 65, 0.1) !important;
+}
+
+.table-danger {
+  background-color: rgba(255, 0, 128, 0.1) !important;
+}
+
+.table-warning {
+  background-color: rgba(255, 215, 0, 0.1) !important;
+}
+
+.table-info {
+  background-color: rgba(0, 245, 255, 0.1) !important;
+}

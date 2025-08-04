@@ -1,0 +1,171 @@
+/* ===== RESPONSIVE MOBILE < 768px ===== */
+@media (max-width: 767px) {
+  
+  /* Animation de fond */
+  body::before {
+    animation-duration: 10s;
+  }
+
+  /* Header */
+  #header .header-nav {
+    height: auto;
+    min-height: 60px;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  #search_widget {
+    margin: 10px;
+  }
+
+  #search_widget input {
+    padding: 10px 15px !important;
+    font-size: 14px;
+  }
+
+  /* Navigation */
+  .main-menu {
+    margin: 5px;
+  }
+
+  .main-menu .category a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* Breadcrumb */
+  #wrapper .breadcrumb {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  /* Produits */
+  .product-miniature {
+    margin-bottom: 20px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #js-product-list {
+    padding: 15px;
+  }
+
+  /* Prix */
+  .price {
+    font-size: 1.2em;
+  }
+
+  /* Boutons */
+  .btn-primary {
+    padding: 12px 25px !important;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-container .h3,
+  .footer-container .h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Formulaires */
+  #customer-form {
+    padding: 1.5rem;
+  }
+
+  .form-control,
+  input,
+  select,
+  textarea {
+    padding: 10px 12px !important;
+    font-size: 14px;
+  }
+
+  /* Compte client */
+  .links a {
+    min-width: 200px !important;
+    padding: 1.5rem 1rem !important;
+    min-height: 120px !important;
+  }
+
+  .links a .material-icons {
+    font-size: 2.5rem !important;
+  }
+
+  /* Sous-menus catégories */
+  li[data-depth="1"] {
+    margin-left: 15px;
+  }
+  
+  li[data-depth="2"] {
+    margin-left: 25px;
+  }
+  
+  li[data-depth="3"] {
+    margin-left: 35px;
+  }
+
+  .arrows,
+  .navbar-toggler,
+  .collapse-icons {
+    right: 10px !important;
+    margin-top: 10px !important;
+    font-size: 16px !important;
+  }
+
+  /* Tableaux */
+  .table-responsive {
+    font-size: 14px;
+  }
+
+  td, th {
+    padding: 8px 10px;
+  }
+
+  /* Sidebar */
+  #left-column .block-categories,
+  #search_filters {
+    padding: 20px;
+    margin-bottom: 1rem;
+  }
+
+  /* Pagination */
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .pagination .page-link {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* Alertes */
+  .alert {
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+  }
+
+  /* Tri des produits */
+  .products-selection .sort-by-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Helpers */
+  .text-sm-center {
+    text-align: center !important;
+  }
+
+  /* Cache certains éléments */
+  .hidden-sm-down {
+    display: none !important;
+  }
+}

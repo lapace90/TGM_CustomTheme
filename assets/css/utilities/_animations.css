@@ -1,0 +1,211 @@
+/* ===== ANIMATIONS ===== */
+
+/* Pulsation douce */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Lueur néon */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--neon-blue);
+  }
+  to {
+    text-shadow: 0 0 20px var(--neon-blue);
+  }
+}
+
+/* Rotation continue */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scan horizontal */
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Curseur animé (optionnel) */
+@keyframes cursor {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+
+/* ===== EFFETS SPÉCIAUX ===== */
+
+/* Glassmorphism de base */
+.glass-effect {
+  background: var(--bg-glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-primary);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Effet néon pour texte */
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+  animation: glow 2s infinite alternate;
+}
+
+/* Effet néon pour bordures */
+.neon-border {
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* Background animé principal */
+.animated-bg {
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(139, 0, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(0, 245, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(255, 0, 128, 0.2) 0%,
+      transparent 50%
+    );
+  background-attachment: fixed;
+}
+
+/* Effet de survol avec transformation */
+.hover-lift {
+  transition: var(--transition-default);
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Effet de brillance */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.shine-effect:hover::after {
+  left: 100%;
+}
+
+/* Gradient animé pour bordures */
+.animated-gradient-border {
+  position: relative;
+}
+
+.animated-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-pink),
+    var(--neon-blue)
+  );
+  border-radius: inherit;
+  z-index: -1;
+  animation: rotate 3s linear infinite;
+}
+
+/* Classes utilitaires d'animation */
+.animate-pulse {
+  animation: pulse 4s infinite;
+}
+
+.animate-glow {
+  animation: glow 2s infinite alternate;
+}
+
+.animate-rotate {
+  animation: rotate 3s linear infinite;
+}
+
+.animate-scan {
+  animation: scan 3s linear infinite;
+}
+
+/* Transitions personnalisées */
+.transition-fast {
+  transition: all 0.2s ease;
+}
+
+.transition-default {
+  transition: var(--transition-default);
+}
+
+.transition-slow {
+  transition: var(--transition-slow);
+}
+
+/* Ombres personnalisées */
+.shadow-neon-blue {
+  box-shadow: 0 0 30px var(--neon-blue);
+}
+
+.shadow-neon-pink {
+  box-shadow: 0 0 30px var(--neon-pink);
+}
+
+.shadow-neon-purple {
+  box-shadow: 0 0 30px var(--neon-purple);
+}
+
+/* Effet de particules (optionnel) */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}

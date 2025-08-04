@@ -37,7 +37,8 @@
   <!--  product line body: label, discounts, price, attributes, customizations -->
   <div class="product-line-grid-body col-md-4 col-xs-8">
     <div class="product-line-info">
-      <a class="label" href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
+      <a class="label" href="{$product.url}"
+        data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
     </div>
 
     <div class="product-line-info product-price h5 {if $product.has_discount}has-discount{/if}">
@@ -46,12 +47,12 @@
           <span class="regular-price">{$product.regular_price}</span>
           {if $product.discount_type === 'percentage'}
             <span class="discount discount-percentage">
-                -{$product.discount_percentage_absolute}
-              </span>
+              -{$product.discount_percentage_absolute}
+            </span>
           {else}
             <span class="discount discount-amount">
-                -{$product.discount_to_display}
-              </span>
+              -{$product.discount_to_display}
+            </span>
           {/if}
         </div>
       {/if}
@@ -61,10 +62,9 @@
           <div class="unit-price-cart">{$product.unit_price_full}</div>
         {/if}
       </div>
-      {hook h='displayProductPriceBlock' product=$product type="unit_price"}
     </div>
 
-    <br/>
+    <br />
 
     {foreach from=$product.attributes key="attribute" item="value"}
       <div class="product-line-info {$attribute|lower}">
@@ -77,8 +77,10 @@
       <br>
       {block name='cart_detailed_product_line_customization'}
         {foreach from=$product.customizations item="customization"}
-          <a href="#" data-toggle="modal" data-target="#product-customizations-modal-{$customization.id_customization}">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
-          <div class="modal fade customization-modal" id="product-customizations-modal-{$customization.id_customization}" tabindex="-1" role="dialog" aria-hidden="true">
+          <a href="#" data-toggle="modal"
+            data-target="#product-customizations-modal-{$customization.id_customization}">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
+          <div class="modal fade customization-modal" id="product-customizations-modal-{$customization.id_customization}"
+            tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -125,22 +127,14 @@
             {if !empty($product.is_gift)}
               <span class="gift-quantity">{$product.quantity}</span>
             {else}
-              <input
-                class="js-cart-line-product-quantity"
-                data-down-url="{$product.down_quantity_url}"
-                data-up-url="{$product.up_quantity_url}"
-                data-update-url="{$product.update_quantity_url}"
-                data-product-id="{$product.id_product}"
-                type="number"
-                inputmode="numeric"
-                pattern="[0-9]*"
-                value="{$product.quantity}"
-                name="product-quantity-spin"
-                aria-label="{l s='%productName% product quantity field' sprintf=['%productName%' => $product.name] d='Shop.Theme.Checkout'}"
-              />
+              <input class="js-cart-line-product-quantity" data-down-url="{$product.down_quantity_url}"
+                data-up-url="{$product.up_quantity_url}" data-update-url="{$product.update_quantity_url}"
+                data-product-id="{$product.id_product}" type="number" inputmode="numeric" pattern="[0-9]*"
+                value="{$product.quantity}" name="product-quantity-spin"
+                aria-label="{l s='%productName% product quantity field' sprintf=['%productName%' => $product.name] d='Shop.Theme.Checkout'}" />
             {/if}
           </div>
-          <div class="col-md-6 col-xs-2 price">
+          {* <div class="col-md-6 col-xs-2 price">
             <span class="product-price">
               <strong>
                 {if !empty($product.is_gift)}
@@ -150,20 +144,15 @@
                 {/if}
               </strong>
             </span>
-          </div>
+          </div> *}
         </div>
       </div>
       <div class="col-md-2 col-xs-2 text-xs-right">
         <div class="cart-line-product-actions">
-          <a
-              class                       = "remove-from-cart"
-              rel                         = "nofollow"
-              href                        = "{$product.remove_from_cart_url}"
-              data-link-action            = "delete-from-cart"
-              data-id-product             = "{$product.id_product|escape:'javascript'}"
-              data-id-product-attribute   = "{$product.id_product_attribute|escape:'javascript'}"
-              data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
-          >
+          <a class="remove-from-cart" style="color: red !important;" rel="nofollow" href="{$product.remove_from_cart_url}"
+            data-link-action="delete-from-cart" data-id-product="{$product.id_product|escape:'javascript'}"
+            data-id-product-attribute="{$product.id_product_attribute|escape:'javascript'}"
+            data-id-customization="{$product.id_customization|escape:'javascript'}">
             {if empty($product.is_gift)}
               <i class="material-icons float-xs-left">delete</i>
             {/if}
@@ -179,4 +168,6 @@
   </div>
 
   <div class="clearfix"></div>
+        {* {hook h='displayProductPriceBlock' product=$product type="unit_price"} *}
+
 </div>

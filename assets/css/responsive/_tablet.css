@@ -1,0 +1,67 @@
+/* ===== RESPONSIVE TABLETTE 768px - 1024px ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* Header */
+  #header .header-nav {
+    height: 70px;
+  }
+
+  /* Navigation */
+  .main-menu .category a {
+    padding: 12px 20px;
+  }
+
+  /* Grille produits */
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  #js-product-list {
+    padding: 25px;
+  }
+
+  /* Compte client */
+  .js-content-wrapper .links {
+    gap: 1rem !important;
+  }
+
+  .links a {
+    min-width: 220px !important;
+    max-width: 280px !important;
+    padding: 1.5rem 1.2rem !important;
+  }
+
+  /* Sidebar */
+  #left-column {
+    margin-bottom: 2rem;
+  }
+
+  /* Footer */
+  .footer-container {
+    padding: 20px;
+  }
+
+  .footer-container .row > [class*="col-"] {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Boutons */
+  .btn-primary {
+    padding: 12px 25px !important;
+  }
+
+  /* Tableaux */
+  .table {
+    font-size: 15px;
+  }
+
+  /* Cache certains éléments */
+  .hidden-md-down {
+    display: none !important;
+  }
+  
+  .hidden-md-up {
+    display: block !important;
+  }
+}

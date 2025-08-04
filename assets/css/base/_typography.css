@@ -1,0 +1,139 @@
+/* ===== TYPOGRAPHIE GLOBALE ===== */
+
+/* Titres */
+h1, h2, h3, h4, h5 {
+  color: var(--text-contrast) !important;
+  font-weight: 600;
+  font-family: var(--font-family-monospace) !important;
+  font-size: 1.8rem !important;
+  text-transform: none !important;
+}
+
+#subcategories ul li .subcategory-name {
+  font-size: 1.1rem;
+}
+
+.featured-products h2 {
+  color: var(--text-primary) !important;
+}
+
+h6 {
+  color: var(--bg-con--text-contrast);
+  font-weight: 500;
+  font-family: var(--font-family-sans-serif);
+}
+
+/* Paragraphes et textes */
+span, div {
+  font-family: var(--font-family-sans-serif);
+  color: var(--text-contrast);
+  font-size: 1rem;
+  line-height: 1 !important;
+}
+
+p, address {
+  font-family: var(--font-family-sans-serif);
+  color: var(--text-primary);
+  text-shadow: none;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Liens généraux */
+a {
+  color: var(--text-contrast);
+  text-decoration: none;
+  transition: var(--transition-default);
+}
+
+a:hover {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Listes */
+ul, ol, li {
+  color: var(--text-contrast) !important;
+}
+
+/* Texte avec font monospace */
+.monospace {
+  font-family: var(--font-family-monospace);
+}
+
+/* Classes de taille de texte */
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+/* Poids de police */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Styles de texte spéciaux */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing {
+  letter-spacing: 1px;
+}
+
+/* Product list header */
+#js-product-list-header {
+  color: var(--text-contrast);
+  font-family: var(--font-family-monospace);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subcategory-heading {
+  color: var(--bg-con--text-contrast);
+  font-family: var(--font-family-monospace);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#category-description p {
+  color: var(--bg-secondary) !important;
+  font-size: 1rem;
+}
+
+#main .page-content >h1, h2 {
+  color: var(--text-primary);
+  font-family: var(--font-family-monospace);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#main .page-content p > a, h3 {
+  color: var(--text-light) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+.subtotal, .shipping {
+  color: var(--bg-secondary);
+}

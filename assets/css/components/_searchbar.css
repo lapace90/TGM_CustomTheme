@@ -1,0 +1,81 @@
+/* ===== BARRE DE RECHERCHE ===== */
+
+body #search_widget,
+body .header-top #search_widget,
+body #header #search_widget,
+body [id*="search_widget"] {
+  background: var(--text-contrast) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 25px !important;
+  backdrop-filter: blur(15px) !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3) !important;
+  margin-bottom: 0.625rem !important;
+  position: relative !important;
+}
+
+/* Input et placeholder */
+body #search_widget input,
+body .header-top #search_widget input,
+body #header #search_widget input,
+body [id*="search_widget"] input {
+  width: 100% !important;
+  font-size: 1.05rem !important;
+  background: var(--text-contrast) !important;
+  border: none !important;
+  color: var(--bg-primary) !important;
+  display: inline-flex !important;
+  font-family: var(--font-family-sans-serif) !important;
+  font-weight: 500 !important;
+  outline: none !important;
+}
+
+body #search_widget input::placeholder,
+body .header-top #search_widget input::placeholder,
+body #header #search_widget input::placeholder,
+body [id*="search_widget"] input::placeholder {
+  color: var(--text-secondary) !important;
+  text-shadow: none !important;
+  font-size: 1.05rem !important;
+  padding: 15px 25px !important;
+}
+
+/* Bouton */
+body #search_widget button,
+body .header-top #search_widget button,
+body #header #search_widget button {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)) !important;
+  border: none !important;
+  color: var(--text-contrast) !important;
+  padding: 15px 25px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+/* Icone recherche */
+body #search_widget form i,
+body .header-top #search_widget form i,
+body #header #search_widget form i {
+  color: var(--neon-purple) !important;
+  font-size: 1.5rem !important;
+  transition: color 0.3s ease !important;
+  z-index: 15 !important;
+  padding: 0.5rem !important;
+  line-height: 1;
+}
+
+/* Responsive simplifié (tu peux compléter) */
+@media (min-width: 768px) {
+  body #search_widget {
+    float: right !important;
+    margin-bottom: 0 !important;
+    min-width: 300px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body #search_widget {
+    min-width: 350px !important;
+  }
+}

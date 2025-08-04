@@ -1,0 +1,243 @@
+/* ===== NAVIGATION ET MENUS ===== */
+
+/* Menu principal cyberpunk */
+.main-menu {
+  border-radius: var(--radius-primary);
+  backdrop-filter: blur(15px);
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.main-menu .category {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-menu .category a {
+  color: var(--text-contrast) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Effet de scan sur les liens */
+.main-menu .category a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neon-blue),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.main-menu .category a:hover::before {
+  left: 100%;
+}
+
+.main-menu .category a:hover {
+  color: var(--text-contrast) !important;
+  text-shadow: 0 0 15px var(--neon-blue), 2px 2px 6px rgba(0, 0, 0, 0.9) !important;
+  background: rgba(0, 245, 255, 0.2);
+}
+
+/* Breadcrumb futuriste */
+#wrapper .breadcrumb {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  animation: pulse 4s infinite;
+  border-radius: 10px;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-glass);
+}
+
+#wrapper .breadcrumb a {
+  color: var(--text-contrast) !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#wrapper .breadcrumb a:hover {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+#wrapper .breadcrumb .active {
+  color: var(--text-secondary) !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== SOUS-MENUS CATÉGORIES ===== */
+
+/* Container principal du menu */
+.category-sub-menu li {
+  position: relative;
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+/* Liens principaux */
+.category-sub-menu > li > a,
+.category-sub-link {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  color: var(--text-contrast) !important;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8) !important;
+  padding: 12px 45px 12px 15px;
+  display: block;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 4s infinite;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+/* Icônes de toggle */
+.category-sub-link + .arrows,
+.category-sub-link + .navbar-toggler,
+.category-sub-link + .collapse-icons,
+a + .arrows,
+a + .navbar-toggler,
+a + .collapse-icons {
+  position: absolute !important;
+  top: 0 !important;
+  right: 15px !important;
+  margin-top: 12px !important;
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  font-size: 18px !important;
+  cursor: pointer;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+}
+
+/* Icônes Material */
+.arrows .material-icons,
+.navbar-toggler .material-icons,
+.collapse-icons .material-icons {
+  color: white !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  bottom: auto;
+}
+
+/* Contenu déroulant */
+.popover .sub-menu .js-sub-menu .collapse {
+  position: relative !important;
+  z-index: 5 !important;
+  margin-top: 0 !important;
+  clear: both !important;
+}
+
+/* ===== HIÉRARCHIE DES NIVEAUX ===== */
+
+/* Niveau 1 */
+li[data-depth="1"] {
+  margin-left: 20px;
+}
+
+li[data-depth="1"] > a,
+li[data-depth="1"] > .category-sub-link {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 110, 255, 0.884),
+    rgba(0, 245, 255, 0.3)
+  );
+  border-left: 3px solid var(--neon-blue);
+  padding: 8px 35px 8px 12px;
+  border-radius: 5px;
+  font-size: 0.95em;
+  font-weight: 500;
+  text-transform: none;
+  animation: none;
+}
+
+/* Icônes niveau 1 */
+li[data-depth="1"] .arrows {
+  margin-top: 8px !important;
+  font-size: 16px !important;
+}
+
+/* Niveau 2 */
+li[data-depth="2"] {
+  margin-left: 35px;
+}
+
+li[data-depth="2"] > a,
+li[data-depth="2"] > .category-sub-link {
+  background: linear-gradient(
+    90deg,
+    rgba(140, 0, 255, 0.795),
+    rgba(139, 0, 255, 0.25)
+  );
+  border-left: 2px solid var(--neon-purple);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: none;
+  animation: none;
+}
+
+/* Niveau 3 */
+li[data-depth="3"] {
+  margin-left: 50px;
+}
+
+li[data-depth="3"] > a,
+li[data-depth="3"] > .category-sub-link {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 128, 0.1),
+    rgba(255, 0, 128, 0.02)
+  );
+  border-left: 1px solid var(--neon-pink);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 300;
+  text-transform: none;
+  animation: none;
+}
+
+/* Hover effects sur sous-menus */
+.category-sub-link:hover,
+.category-sub-menu a:hover {
+  transform: translateX(3px);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+}
+
+/* Supprimer les lignes de hiérarchie */
+li[data-depth="1"]:before,
+li[data-depth="2"]:before,
+li[data-depth="3"]:before {
+  display: none !important;
+}
+
+/* Pagination */
+.pagination > div:first-child,
+.total-products p,
+.products-selection .sort-by-row .sort-by {
+  margin-top: 20px;
+  text-shadow: none !important;
+}
+
+

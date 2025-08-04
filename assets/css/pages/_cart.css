@@ -1,0 +1,39 @@
+.cart-grid-body .card-block h1 {
+  color: var(--bg-secondary) !important;
+}
+
+.cart-grid-body.col-xs-12.col-lg-8 > a.label {
+  color: var(--text-contrast);
+}
+
+.product-line-grid {
+  background: var(--bg-glass-light);
+  border-radius: var(--radius-primary);
+  box-shadow: var(--shadow-glass);
+  transition: var(--transition-default);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center;
+}
+
+span.price {
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up,
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+  border: none;
+  background: transparent;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical > .btn:hover {
+  background: rgba(0, 0, 0, 0.4) !important;
+  color: var(--text-contrast);
+  border-radius: var(--radius-primary);
+  box-shadow: var(--shadow-neon);
+  transition: var(--transition-default);
+  overflow: hidden !important;
+  z-index: 1;
+}

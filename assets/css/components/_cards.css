@@ -1,0 +1,205 @@
+/* ===== CARTES PRODUITS GLASSMORPHISM ===== */
+.product-miniature {
+  background-color: transparent;
+  padding: 0.7rem;
+  backdrop-filter: blur(15px);
+  border-radius: var(--radius-primary);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-glass);
+}
+
+/* Effet néon animé */
+.product-miniature::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    var(--neon-blue),
+    var(--neon-purple),
+    var(--neon-pink),
+    var(--neon-blue)
+  );
+  animation: rotate 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.product-miniature:hover::before {
+  opacity: 0.15;
+}
+
+.product-miniature:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Textes produits */
+.product-miniature h3,
+.product-miniature .product-title,
+.product-miniature .product-title a {
+  color: var(--text-contrast) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.product-miniature .product-description,
+.product-miniature .product-reference {
+  color: var(--text-secondary) !important;
+  background-color: var(--bg-glass-mid);
+  border-radius: 8px;
+  margin: 0;
+  padding-bottom: 0.8rem;
+}
+
+/* Images produits */
+.product-miniature .thumbnail {
+  overflow: hidden;
+}
+
+.product-miniature .thumbnail-container {
+  border-radius: var(--radius-primary);
+  margin: auto;
+}
+
+.thumbnail-top {
+  overflow: hidden;
+  border-radius: var(--radius-primary);
+}
+
+/* Effet de brillance sur l'image */
+.product-miniature .thumbnail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.product-miniature:hover .thumbnail::after {
+  left: 100%;
+}
+
+/* Prix néon */
+.price {
+  font-family: var(--font-family-monospace);
+  font-size: 1.5em;
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--neon-blue);
+  color: white;
+  animation: glow 2s infinite alternate;
+}
+
+/* Quick view */
+.quick-view {
+  border: 1px solid var(--glass-border);
+  color: var(--neon-blue);
+  text-shadow: none;
+}
+
+/* Informations surlignées */
+.highlighted-informations {
+  position: absolute;
+  z-index: 10;
+}
+
+.js-product {
+  display: grid;
+  
+  align-items: stretch;
+  padding: .8rem;
+}
+
+/* Wishlist */
+.wishlist-button-add:hover {
+  box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.wishlist-button-add i {
+  color: var(--neon-pink) !important;
+}
+
+/* Container des produits */
+#js-product-list {
+  background-color: var(--text-contrast) !important;
+  padding: 15px;
+  border-radius: var(--radius-primary);
+  margin-bottom: 2rem;
+}
+
+/* Images fluides */
+.img-fluid {
+  border-radius: 15px !important;
+}
+
+#main .page-not-found {
+  background: var(--bg-glass-mid) !important;
+}
+
+/* Style Glassmorphism pour les blocs d'adresses */
+.address {
+  background-color: var(--bg-glass-mid) !important;
+  border-radius: var(--radius-primary);
+  box-shadow: var(--shadow-glass);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  margin-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.address:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet néon pour les titres et liens */
+.address h4,
+.address a {
+  color: var(--text-contrast) !important;
+  text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* Animation de surbrillance pour les liens */
+.address-footer a {
+  transition: text-shadow 0.3s, transform 0.3s;
+}
+
+.address-footer a:hover {
+  text-shadow: 0 0 15px var(--neon-pink);
+  transform: scale(1.05);
+}
+
+/* Style pour le pied de page des adresses */
+.addresses-footer a {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-glass-mid);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-primary);
+  color: var(--neon-blue);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.addresses-footer a:hover {
+  box-shadow: 0 0 15px var(--neon-blue);
+  transform: scale(1.05);
+}
+
+.page-addresses .addresses-footer a span {
+  margin: 0 !important;
+  padding-left: 1rem;
+}

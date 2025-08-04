@@ -1,0 +1,93 @@
+/* ===== HEADER FUTURISTE ===== */
+#header .header-nav {
+  background: linear-gradient(
+    90deg,
+    var(--neon-pink),
+    var(--neon-purple),
+    var(--neon-blue)
+  );
+  border-bottom: #f6f6f6 2px solid;
+  border-top: 1px solid var(--glass-border);
+  height: 85px;
+}
+
+.header-top {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  padding: 5px 0;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: pulse 4s infinite;
+  
+}
+
+/* Liens du header */
+#header a {
+  color: var(--text-contrast) !important;
+  text-decoration: none;
+  font-weight: 600 !important;
+  transition: color 0.3s ease;
+  font-family: var(--font-family-sans-serif);
+}
+
+#header a:hover {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Panier */
+#header .header-nav .blockcart {
+  background: transparent;
+  backdrop-filter: blur(15px);
+  color: var(--text-contrast) !important;
+  height: 45px;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+}
+
+#header .header-nav .blockcart a {
+  color: var(--text-contrast) !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px;
+}
+
+#header .header-nav .blockcart a:hover {
+  color: var(--neon-blue) !important;
+  text-shadow: 0 0 15px var(--neon-blue);
+}
+
+#header .header-nav .blockcart .cart-products-count {
+  background: var(--neon-blue);
+  color: var(--text-contrast);
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+/* Icône panier */
+.shopping-cart {
+  color: var(--neon-blue) !important;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1px;
+}
+
+.popover.sub-menu.js-sub-menu.collapse {
+  background: var(--bg-glass) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(15px) !important;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3) !important;
+  z-index: 9999 !important;
+  color: red !important;
+}
