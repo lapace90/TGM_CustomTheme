@@ -94,12 +94,13 @@
 }
 
 /* Prix néon */
+.product-price-and-shipping >
 .price {
   font-family: var(--font-family-monospace);
   font-size: 1.5em;
   font-weight: 700;
   text-shadow: 0 0 10px var(--neon-blue);
-  color: white;
+  color: var(--text-white) !important;
   animation: glow 2s infinite alternate;
 }
 
@@ -160,6 +161,18 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.page-addresses .address .address-body address {
+  color: var(--text-contrast) !important;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 5rem;
+}
+
+address {
+  font-style: var(--font-family-monospace);
+  color: var(--text-contrast) !important;
+}
+
 .address:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -173,13 +186,20 @@
 }
 
 /* Animation de surbrillance pour les liens */
-.address-footer a {
+.page-addresses .address .address-footer a span {
+  color: var(--text-contrast) !important;
   transition: text-shadow 0.3s, transform 0.3s;
 }
 
 .address-footer a:hover {
-  text-shadow: 0 0 15px var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
   transform: scale(1.05);
+}
+
+.page-addresses .addresses-footer a span {
+  color: var(--text-contrast) !important;
+  font-weight: bold;
+  transition: all 0.3s, transform 0.3s;
 }
 
 /* Style pour le pied de page des adresses */
@@ -189,17 +209,22 @@
   background-color: var(--bg-glass-mid);
   padding: 0.5rem 1rem;
   border-radius: var(--radius-primary);
-  color: var(--neon-blue);
+  color: var(--neon-green);
   text-decoration: none;
+  border: 2px solid var(--neon-green);
   transition: all 0.3s;
 }
 
 .addresses-footer a:hover {
-  box-shadow: 0 0 15px var(--neon-blue);
+  box-shadow: 0 0 15px var(--neon-green);
   transform: scale(1.05);
 }
 
 .page-addresses .addresses-footer a span {
   margin: 0 !important;
   padding-left: 1rem;
+}
+
+.page-addresses .addresses-footer a i {
+  color: var(--text-contrast) !important;
 }

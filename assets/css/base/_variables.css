@@ -1,7 +1,6 @@
 /* ===================================
-   VARIABLES GLOBALES DU THÈME
+   TES VARIABLES EXACTES - MODE SOMBRE
    =================================== */
-
 :root {
   /* Couleurs de fond */
   --bg-primary: #0a0a0a;
@@ -9,34 +8,141 @@
   --bg-glass: rgba(0, 0, 0, 0.7);
   --bg-glass-mid: rgba(0, 0, 0, 0.3);
   --bg-glass-light: rgba(255, 255, 255, 0.15);
-  
   /* Couleurs néon */
   --neon-blue: #00f5ff;
   --neon-pink: #ff0080;
   --neon-purple: #8b00ff;
   --neon-green: #00ff41;
-  
-  /* Couleurs de texte */
+  /* Couleurs de texte - TES VALEURS EXACTES */
   --text-primary: #0a0a0a;
-  --text-secondary: #e0e0e0;
+  --text-secondary: #383855;
   --text-contrast: #f8f8f8;
   --text-light: #7f8c8d;
-  
+  --text-white: #fff;
   /* Bordures et effets */
   --glass-border: rgba(255, 255, 255, 0.3);
-  --shadow-neon: 0 0 20px var(--neon-blue);
+  --shadow-neon: 0 0 15px var(--neon-blue);
   --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
   --text-shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  
   /* Layout */
   --radius-primary: 15px;
-  
   /* Typographie */
   --font-family-sans-serif: "Rajdhani", sans-serif;
   --font-family-monospace: "Orbitron", monospace;
-  
   /* Transitions */
   --transition-default: all 0.3s ease;
   --transition-slow: all 0.5s ease;
   --transition-fast: all 0.2s ease;
+}
+
+/* ===================================
+   RÈGLES SPÉCIFIQUES MODE SOMBRE
+   =================================== */
+#main .page-content,
+#main section.page-content {
+  background: var(--bg-glass-light) !important;
+}
+
+/* ===================================
+   MODE CLAIR - SEULEMENT LES CHANGEMENTS NÉCESSAIRES
+   =================================== */
+[data-theme="light"] {
+  /* Fonds inversés */
+  --bg-primary: #f8f9fa;
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --bg-glass-mid: rgba(255, 255, 255, 0.6);
+  --bg-glass-light: rgba(0, 0, 0, 0.05);
+  /* Couleurs de texte adaptées */
+  --text-secondary: #4e4d4d !important;
+  --text-contrast: #212529 !important;
+  --text-white: #fff !important;
+  /* Bordures adaptées */
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+   RÈGLES SPÉCIFIQUES MODE CLAIR
+   =================================== */
+[data-theme="light"] #main .page-content,
+[data-theme="light"] #main section.page-content {
+  background: var(--text-white) !important;
+}
+[data-theme="light"] h1{
+  text-shadow: 0 0 5px var(--text-white) !important;
+}
+/* ===================================
+   ÉLÉMENTS QUI RESTENT TOUJOURS SOMBRES
+   =================================== */
+
+/* HEADER PRINCIPAL SEULEMENT */
+#header,
+body > header,
+.main-header,
+.site-header {
+  --bg-primary: #0a0a0a !important;
+  --bg-secondary: #383855 !important;
+  --bg-glass: rgba(0, 0, 0, 0.7) !important;
+  --bg-glass-mid: rgba(0, 0, 0, 0.3) !important;
+  --bg-glass-light: rgba(255, 255, 255, 0.15) !important;
+  --text-primary: #0a0a0a !important;
+  --text-secondary: #e0e0e0 !important;
+  --text-contrast: #f8f8f8 !important;
+  --text-light: #7f8c8d !important;
+  --text-white: #fff !important;
+  --glass-border: rgba(255, 255, 255, 0.3) !important;
+  --shadow-neon: 0 0 20px var(--neon-blue) !important;
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37) !important;
+  --text-shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* FOOTER PRINCIPAL SEULEMENT */
+#footer,
+body > footer,
+.main-footer,
+.site-footer {
+  --bg-primary: #0a0a0a !important;
+  --bg-secondary: #383855 !important;
+  --bg-glass: rgba(0, 0, 0, 0.7) !important;
+  --bg-glass-mid: rgba(0, 0, 0, 0.3) !important;
+  --bg-glass-light: rgba(255, 255, 255, 0.15) !important;
+  --text-primary: #0a0a0a !important;
+  --text-secondary: #e0e0e0 !important;
+  --text-contrast: #f8f8f8 !important;
+  --text-light: #7f8c8d !important;
+  --text-white: #fff !important;
+  --glass-border: rgba(255, 255, 255, 0.3) !important;
+  --shadow-neon: 0 0 20px var(--neon-blue) !important;
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37) !important;
+  --text-shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* CARDS PRODUITS SEULEMENT */
+.product-miniature,
+.product-card,
+.product-item,
+.card-product,
+.thumbnail-container,
+.product-thumbnail {
+  --bg-primary: #0a0a0a !important;
+  --bg-secondary: #383855 !important;
+  --bg-glass: rgba(0, 0, 0, 0.7) !important;
+  --bg-glass-mid: rgba(0, 0, 0, 0.3) !important;
+  --bg-glass-light: rgba(255, 255, 255, 0.15) !important;
+  --text-primary: #0a0a0a !important;
+  --text-secondary: #e0e0e0 !important;
+  --text-contrast: #f8f8f8 !important;
+  --text-light: #7f8c8d !important;
+  --text-white: #fff !important;
+  --glass-border: rgba(255, 255, 255, 0.3) !important;
+  --shadow-neon: 0 0 20px var(--neon-blue) !important;
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37) !important;
+  --text-shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Transitions pour le reste du contenu */
+* {
+  transition: background-color var(--transition-default),
+    border-color var(--transition-default), 
+    box-shadow var(--transition-default);
 }

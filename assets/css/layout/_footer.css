@@ -58,6 +58,14 @@
   font-size: 0.9em !important;
   padding: 20px !important;
   text-align: center !important;
+
+}
+
+p.text-sm-center {
+  color: var(--text-secondary);
+  font-size: 0.9em !important;
+  padding: 20px !important;
+  margin-top: .5rem !important;
 }
 
 /* Liens du footer */
@@ -90,8 +98,8 @@
 }
 
 #footer .block_newsletter form input[type="email"] {
-  border: 1px solid var(--bg-glass-light) !important;
-  background: var(--text-contrast) !important;
+  border: 1px solid #ddd !important;
+  background: var(--text-white) !important;
   border-radius: 10px !important;
   color: var(--bg-primary) !important;
   text-shadow: none !important;

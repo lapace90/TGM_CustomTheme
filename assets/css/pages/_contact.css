@@ -41,7 +41,7 @@
 /* Titre du widget */
 .contact-rich h4,
 .contact-rich .h4 {
-  color: var(--neon-blue) !important;
+  color: var(--text-contrast);
   font-family: var(--font-family-monospace);
   text-transform: uppercase;
   font-weight: 700;
@@ -62,7 +62,7 @@
 }
 
 .contact-rich .icon i {
-  color: var(--text-contrast) !important;
+  color: var(--text-white) !important;
   font-size: 1.3rem;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .contact-rich .data {
-  color: var(--text-secondary) !important;
+  color: var(--text-contrast) !important;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -113,7 +113,7 @@
 /* Titre du formulaire */
 .contact-form h3,
 .contact-form .h3 {
-  color: var(--neon-blue) !important;
+  color: var(--text-contrast) !important;
   font-family: var(--font-family-monospace);
   text-transform: uppercase;
   font-weight: 700;
@@ -130,7 +130,7 @@
 
 /* Labels */
 .contact-form label {
-  color: var(--neon-blue) !important;
+  color: var(--text-contrast) !important;
   font-weight: 600 !important;
   font-family: var(--font-family-sans-serif);
   text-transform: uppercase;
@@ -140,7 +140,7 @@
   display: block;
 }
 
-/* Champs de formulaire */
+/* Champs de formulaire - Mode sombre */
 .contact-form .form-control,
 .contact-form input[type="text"],
 .contact-form input[type="email"],
@@ -157,7 +157,7 @@
   transition: var(--transition-default);
 }
 
-/* Focus des champs */
+/* Focus des champs - Mode sombre */
 .contact-form .form-control:focus,
 .contact-form input:focus,
 .contact-form textarea:focus,
@@ -166,6 +166,49 @@
   box-shadow: 0 0 20px rgba(0, 245, 255, 0.4) !important;
   outline: none !important;
   background: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ===== ADAPTATION MODE CLAIR - FORMULAIRE CONTACT ===== */
+[data-theme="light"] .contact-form .form-control,
+[data-theme="light"] .contact-form input[type="text"],
+[data-theme="light"] .contact-form input[type="email"],
+[data-theme="light"] .contact-form textarea,
+[data-theme="light"] .contact-form select {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  color: var(--text-contrast) !important;
+}
+
+[data-theme="light"] .contact-form .form-control:focus,
+[data-theme="light"] .contact-form input:focus,
+[data-theme="light"] .contact-form textarea:focus,
+[data-theme="light"] .contact-form select:focus {
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* File upload - Mode clair */
+[data-theme="light"] .contact-form input[type="file"] {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="light"] .contact-form .custom-file-label {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Validation des champs - Mode clair */
+[data-theme="light"] .contact-form .form-group.has-error .form-control {
+  border-color: var(--neon-pink) !important;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.2) !important;
+}
+
+[data-theme="light"] .contact-form .form-group.has-success .form-control {
+  border-color: var(--neon-green) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2) !important;
 }
 
 /* Textarea */

@@ -1,0 +1,122 @@
+/* ===================================
+   AJOUTS POUR HARMONISER LA WISHLIST
+   =================================== */
+
+/* Ajouter les classes wishlist à tes règles existantes */
+
+/* Container wishlist comme tes autres containers */
+.sort-container,
+.wishlist-products-container .sort-by-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Label wishlist comme tes autres labels */
+.sort-label,
+.wishlist-products-container .sort-by-row .sort-by {
+  font-weight: 700;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  color: var(--text-contrast);
+  text-shadow: none !important;
+}
+
+/* Select wishlist comme tes autres selects */
+.custom-sort-select select,
+.wishlist-products-container .sort-by-row .products-sort-order {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-contrast);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  text-shadow: none !important;
+}
+
+/* Focus wishlist comme tes autres focus */
+.custom-sort-select select:focus,
+.wishlist-products-container .sort-by-row .products-sort-order:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+/* Container parent wishlist comme products-selection */
+.custom-sort-select,
+.wishlist-products-container .sort-by-row {
+  position: relative;
+  flex: 1;
+  min-width: 100%;
+  padding: 1rem;
+}
+
+/* Flèche pour la wishlist */
+.custom-sort-select::after,
+.wishlist-products-container .sort-by-row::after {
+  content: "▼";
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-contrast);
+  font-size: 11px;
+  pointer-events: none;
+}
+
+/* Background glassmorphism pour wishlist aussi */
+.products-selection,
+.wishlist-products-container .sort-by-row {
+  padding-left: 1rem;
+  background: var(--bg-glass-light) !important;
+  border-radius: var(--radius-primary);
+  backdrop-filter: blur(10px);
+}
+.wishlist-products-container-header .sort-by-row {
+  display: none !important;
+}
+
+#search_filters > .h6 {
+  color: var(--text-contrast);
+  font-weight: 600;
+  font-size: 1.3rem !important;
+  text-transform: none !important;
+}
+
+#js-active-search-filters:not(.hide) {
+  background-color: var(--bg-glass-light);
+  border-radius: var(--radius-primary);
+  padding: .7rem;
+  box-shadow: var(--shadow-glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-contrast);
+  
+}
+
+.active_filters .filter-block {
+  
+  text-shadow: none !important;
+  color: var(--text-contrast);
+  font-weight: 500;
+  padding: 0.7rem;
+  border-radius: var(--radius-primary);
+  background-color: var(--bg-glass-mid);
+  box-shadow: var(--shadow-glass);
+  border: 1px solid var(--glass-border);
+  font-size: .9rem !important;
+}
+
+.active_filters .filter-block .close {
+  color: var(--text-contrast);
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+}

@@ -28,7 +28,7 @@
 
 /* Informations du produit */
 .product-information {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-glass);
   color: var(--text-contrast);
   margin-top: 1rem;
   padding: 1.2rem;
@@ -64,7 +64,7 @@ h1.product-title {
 .add-to-cart {
   background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
   border: none;
-  color: var(--text-contrast) !;
+  color: var(--text-white) !important;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: bold;
@@ -104,7 +104,7 @@ h1.product-title {
 }
 
 .blockreassurance_product, .tabs, .product-comment-list-item {
-  background-color: var(--text-contrast);
+  background-color: var(--text-white);
   padding: 0.8rem;
   border-radius: var(--radius-primary);
 }

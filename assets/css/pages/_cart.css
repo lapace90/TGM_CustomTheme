@@ -17,9 +17,13 @@
   align-items: center;
 }
 
-span.price {
+.current-price > span.price {
+  font-family: var(--font-family-monospace);
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--text-light);
-  font-weight: 600;
+  padding: 0.7rem 0.8rem;
+  text-shadow: none;
 }
 
 .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up,
@@ -29,11 +33,31 @@ span.price {
 }
 
 .bootstrap-touchspin .input-group-btn-vertical > .btn:hover {
-  background: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
   color: var(--text-contrast);
   border-radius: var(--radius-primary);
   box-shadow: var(--shadow-neon);
   transition: var(--transition-default);
   overflow: hidden !important;
   z-index: 1;
+}
+
+.promo-code-button.display-promo {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.promo-code-button.display-promo > a {
+  color: var(--neon-pink) !important;
+  text-decoration: none;
+}
+
+.js-cart-line-product-quantity {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
 }

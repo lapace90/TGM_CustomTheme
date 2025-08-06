@@ -1,5 +1,4 @@
 /* ===== FORMULAIRES CYBERPUNK ===== */
-
 /* Formulaire client */
 #customer-form {
   background: var(--bg-glass);
@@ -11,15 +10,15 @@
   width: 100%;
   margin: 2rem auto;
 }
-
 /* Labels */
 #customer-form label,
 form label {
-  color: var(--neon-blue) !important;
+  color: var(--text-contrast) !important;
+  font-size: 1.1rem;
   font-weight: 600 !important;
   font-family: var(--font-family-sans-serif);
+  line-height: 1.2;
 }
-
 /* Champs de saisie généraux */
 .form-control,
 input[type="text"],
@@ -27,16 +26,13 @@ input[type="email"],
 input[type="password"],
 input[type="tel"],
 input[type="number"],
-select,
 textarea {
-  background: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0, 0, 0, 0.2) !important;
   border: 1px solid var(--glass-border) !important;
   border-radius: 10px !important;
   color: var(--text-contrast) !important;
-  
   transition: var(--transition-default);
 }
-
 /* Focus sur les champs */
 .form-control:focus,
 input:focus,
@@ -46,7 +42,6 @@ textarea:focus {
   box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
   outline: none !important;
 }
-
 /* Formulaire client spécifique */
 #customer-form .form-control,
 #customer-form input,
@@ -56,15 +51,65 @@ textarea:focus {
   border: 1px solid var(--glass-border) !important;
   border-radius: 10px !important;
   color: var(--text-contrast) !important;
-  
+ 
 }
-
 #customer-form .form-control:focus,
 #customer-form input:focus,
 #customer-form select:focus {
   border-color: var(--neon-blue) !important;
   box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
   outline: none !important;
+ 
+}
+
+/* ===== ADAPTATION MODE CLAIR POUR LES INPUTS ===== */
+[data-theme="light"] .form-control,
+[data-theme="light"] input[type="text"],
+[data-theme="light"] input[type="email"],
+[data-theme="light"] input[type="password"],
+[data-theme="light"] input[type="tel"],
+[data-theme="light"] input[type="number"],
+[data-theme="light"] textarea {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  color: var(--text-contrast) !important;
+}
+
+[data-theme="light"] #customer-form .form-control,
+[data-theme="light"] #customer-form input,
+[data-theme="light"] #customer-form select,
+[data-theme="light"] #customer-form textarea {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  color: var(--text-contrast) !important;
+}
+
+[data-theme="light"] .form-control:focus,
+[data-theme="light"] input:focus,
+[data-theme="light"] select:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] #customer-form .form-control:focus,
+[data-theme="light"] #customer-form input:focus,
+[data-theme="light"] #customer-form select:focus {
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Barre de recherche adaptée pour le mode clair */
+[data-theme="light"] input[type="search"] {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  color: var(--text-contrast) !important;
+}
+
+[data-theme="light"] input[type="search"]:focus {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2) !important;
+}
+
+[data-theme="light"] input[type="search"]::placeholder {
+  color: var(--text-secondary) !important;
 }
 
 /* Boutons dans les formulaires */
@@ -72,7 +117,6 @@ textarea:focus {
   box-shadow: 0 0 25px var(--neon-blue);
   transform: translateY(-2px);
 }
-
 /* Bouton show/hide password */
 .btn-show {
   box-shadow: none !important;
@@ -80,32 +124,27 @@ textarea:focus {
   line-height: 1.8 !important;
   margin-left: 5px !important;
 }
-
 /* Messages de validation */
 .invalid-feedback,
 .form-control-comment,
 .help-block {
   display: none !important;
 }
-
 /* Enlever les bordures de validation */
 *[style*="border"]:not(.btn) {
   border: 1px solid var(--glass-border) !important;
 }
-
 /* Reset des styles de validation Bootstrap */
 .was-validated .form-control:valid,
 .form-control.is-valid {
   border-color: var(--glass-border) !important;
   box-shadow: none !important;
 }
-
 .was-validated .form-control:invalid,
 .form-control.is-invalid {
   border-color: var(--glass-border) !important;
   box-shadow: none !important;
 }
-
 /* Barre de recherche du header (déjà dans header.css mais pour cohérence) */
 input[type="search"] {
   background: rgba(0, 0, 0, 0.3);
@@ -113,7 +152,6 @@ input[type="search"] {
   color: var(--text-contrast) !important;
   padding: 12px 20px;
 }
-
 input[type="search"]::placeholder {
   color: var(--text-secondary) !important;
 }

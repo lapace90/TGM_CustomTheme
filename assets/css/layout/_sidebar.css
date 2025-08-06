@@ -3,7 +3,7 @@
 /* Colonnes et filtres */
 #left-column .block-categories,
 #search_filters {
-  background-color: var(--text-contrast) !important;
+  background-color: var(--text-white) !important;
   padding: 30px;
   border-radius: var(--radius-primary);
   margin-bottom: 2rem;
@@ -19,7 +19,7 @@
 
 /* Labels des facettes */
 [id^="facet_label_"] {
-  color: var(--bg-primary) !important;
+  color: var(--bg-contrast) !important;
   text-transform: uppercase !important;
   font-family: var(--font-family-sans-serif) !important;
   text-shadow: none !important;
@@ -90,7 +90,7 @@ margin: 10px;
 }
 
 .ui-autocomplete-input {
-  background: var(--text-contrast) !important;
+  background: var(--text-white) !important;
 
   border-radius: 10px !important;
   transition: var(--transition-default);

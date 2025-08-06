@@ -1,83 +1,302 @@
-/* ===== TABLEAUX ET LISTES ===== */
+/* ===== TABLEAUX ET LISTES CYBERPUNK AÉRÉS ===== */
 
-/* Tableaux */
+/* Tableaux principaux */
 table,
 .table {
-  background: var(--bg-glass);
+  background: var(--bg-glass-light);
   backdrop-filter: blur(15px);
   border: 1px solid var(--glass-border);
-  border-radius: 10px;
+  border-radius: var(--radius-primary);
+  border-collapse: separate;
+  border-spacing: 0;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-glass);
+  font-family: var(--font-family-sans-serif);
 }
 
-/* Cellules */
+/* Cellules - Plus aérées avec séparations */
 td,
 th {
   color: var(--text-contrast) !important;
-  border-color: var(--glass-border) !important;
-  background: rgba(0, 0, 0, 0.2) !important;
-  padding: 12px 15px;
+  background: transparent !important;
+  padding: 18px 20px;
   text-align: left;
+  vertical-align: middle;
+  transition: var(--transition-default);
+  border-bottom: 1px solid var(--glass-border) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* En-têtes */
+/* Dernière colonne sans bordure droite */
+td:last-child,
+th:last-child {
+  border-right: none !important;
+}
+
+/* Dernière ligne sans bordure bas */
+tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* En-têtes - Style moderne avec séparation */
 th {
-  background: rgba(0, 0, 0, 0.4) !important;
-  font-weight: 600 !important;
+  background: var(--bg-secondary) !important;
+  font-weight: 700 !important;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.875rem;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: var(--text-contrast) !important;
+  border-bottom: 2px solid var(--neon-blue) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+  position: relative;
 }
 
-/* Lignes alternées */
-tbody tr:nth-child(even) td {
-  background: rgba(0, 0, 0, 0.3) !important;
+/* Effet néon sur les headers */
+th::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neon-blue),
+    transparent
+  );
+  opacity: 0.8;
 }
 
-/* Hover sur les lignes */
-tbody tr:hover td {
-  background: rgba(0, 245, 255, 0.1) !important;
+/* Lignes du corps */
+tbody tr {
   transition: var(--transition-default);
 }
 
-/* Tableaux responsifs */
+tbody tr:nth-child(even) {
+  background: var(--bg-glass-light) !important;
+}
+
+tbody tr:nth-child(odd) {
+  background: transparent !important;
+}
+
+/* Hover sur les lignes */
+tbody tr:hover {
+  background: rgba(0, 245, 255, 0.08) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 245, 255, 0.1);
+}
+
+tbody tr:hover td {
+  color: var(--text-contrast) !important;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(0, 245, 255, 0.3) !important;
+}
+
+/* Conteneur responsive */
 .table-responsive {
   border: 1px solid var(--glass-border);
-  border-radius: 10px;
+  border-radius: var(--radius-primary);
   overflow-x: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  background: var(--bg-glass-light);
+  backdrop-filter: blur(15px);
+  box-shadow: var(--shadow-glass);
 }
 
-/* Tableaux striped */
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.15);
+.table-responsive .table {
+  margin-bottom: 0;
+  border: none;
+  background: transparent;
 }
 
-/* Tableaux bordered */
-.table-bordered {
-  border: 1px solid var(--glass-border);
+/* Classes d'état avec bordures distinctives */
+.table-success,
+tr.table-success {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 65, 0.05), 
+    rgba(0, 255, 65, 0.1)) !important;
+  border-left: 4px solid var(--neon-green) !important;
 }
 
-.table-bordered td,
-.table-bordered th {
-  border: 1px solid var(--glass-border);
+.table-danger,
+tr.table-danger {
+  background: linear-gradient(135deg, 
+    rgba(255, 0, 128, 0.05), 
+    rgba(255, 0, 128, 0.1)) !important;
+  border-left: 4px solid var(--neon-pink) !important;
 }
 
-/* Classes d'état */
-.table-success {
-  background-color: rgba(0, 255, 65, 0.1) !important;
+.table-warning,
+tr.table-warning {
+  background: linear-gradient(135deg, 
+    rgba(255, 215, 0, 0.05), 
+    rgba(255, 215, 0, 0.1)) !important;
+  border-left: 4px solid #ffd700 !important;
 }
 
-.table-danger {
-  background-color: rgba(255, 0, 128, 0.1) !important;
+.table-info,
+tr.table-info {
+  background: linear-gradient(135deg, 
+    rgba(0, 245, 255, 0.05), 
+    rgba(0, 245, 255, 0.1)) !important;
+  border-left: 4px solid var(--neon-blue) !important;
 }
 
-.table-warning {
-  background-color: rgba(255, 215, 0, 0.1) !important;
+/* Tableaux compacts */
+.table-sm td,
+.table-sm th {
+  padding: 12px 15px;
 }
 
-.table-info {
-  background-color: rgba(0, 245, 255, 0.1) !important;
+/* Liens dans les tableaux - Mieux visibles */
+
+table a,
+.table a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-default);
+  padding: 4px 8px !important;
+  border-radius: 6px;
+  background: rgba(0, 245, 255, 0.1);
+  margin: 2px !important;
+}
+
+table a:hover,
+.table a:hover {
+  color: var(--neon-green) !important;
+  text-shadow: 0 0 8px var(--neon-green);
+  background: rgba(0, 255, 65, 0.15);
+}
+
+/* Boutons dans les tableaux */
+table .btn,
+.table .btn {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  margin: 2px;
+}
+
+/* ===== ADAPTATION MODE CLAIR ===== */
+[data-theme="light"] table,
+[data-theme="light"] .table {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] td,
+[data-theme="light"] th {
+  color: var(--text-contrast) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+  border-right-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] th {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-bottom: 2px solid var(--neon-blue) !important;
+  border-right-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02) !important;
+}
+
+[data-theme="light"] tbody tr:hover {
+  background: rgba(0, 245, 255, 0.05) !important;
+  box-shadow: 0 4px 15px rgba(0, 245, 255, 0.08);
+}
+
+[data-theme="light"] tbody tr:hover td {
+  text-shadow: none;
+  border-right-color: rgba(0, 245, 255, 0.2) !important;
+}
+
+[data-theme="light"] .table-responsive {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Liens en mode clair - Style encadré */
+[data-theme="light"] table a,
+[data-theme="light"] .table a {
+  color: #0056b3 !important;
+  background: rgba(0, 86, 179, 0.1);
+}
+
+[data-theme="light"] table a:hover,
+[data-theme="light"] .table a:hover {
+  color: #003d82 !important;
+  background: rgba(0, 61, 130, 0.15);
+  text-shadow: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  td,
+  th {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+  
+  th {
+    font-size: 0.8rem;
+  }
+  
+  table a,
+  .table a {
+    padding: 2px 6px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  td,
+  th {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  
+  th {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  table a,
+  .table a {
+    padding: 2px 4px !important;
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== ANIMATIONS SUBTILES ===== */
+@keyframes tableRowLoad {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+tbody tr {
+  animation: tableRowLoad 0.3s ease-out;
+}
+
+tbody tr:nth-child(1) { animation-delay: 0.05s; }
+tbody tr:nth-child(2) { animation-delay: 0.1s; }
+tbody tr:nth-child(3) { animation-delay: 0.15s; }
+tbody tr:nth-child(4) { animation-delay: 0.2s; }
+tbody tr:nth-child(5) { animation-delay: 0.25s; }
+
+
+.product-ref {
+  display: flex;
+  justify-content: space-between;
 }

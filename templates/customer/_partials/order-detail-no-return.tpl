@@ -35,7 +35,7 @@
       </thead>
       {foreach from=$order.products item=product}
         <tr>
-          <td>
+          <td class="product-ref">
             <strong>
               <a {if isset($product.download_link)}href="{$product.download_link}"{/if}>
                 {$product.name}

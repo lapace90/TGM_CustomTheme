@@ -1,8 +1,18 @@
 /* ===== TYPOGRAPHIE GLOBALE ===== */
 
 /* Titres */
-h1, h2, h3, h4, h5 {
-  color: var(--text-contrast) !important;
+h1 {
+  color: var(--text-contrast);
+  font-family: var(--font-family-monospace) !important;
+  font-size: 2rem !important;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-contrast);
   font-weight: 600;
   font-family: var(--font-family-monospace) !important;
   font-size: 1.8rem !important;
@@ -18,20 +28,22 @@ h1, h2, h3, h4, h5 {
 }
 
 h6 {
-  color: var(--bg-con--text-contrast);
+  color: var(--text-contrast);
   font-weight: 500;
   font-family: var(--font-family-sans-serif);
 }
 
 /* Paragraphes et textes */
-span, div {
+span,
+div {
   font-family: var(--font-family-sans-serif);
-  color: var(--text-contrast);
   font-size: 1rem;
   line-height: 1 !important;
+  color: var(--text-white);
 }
 
-p, address {
+p,
+address {
   font-family: var(--font-family-sans-serif);
   color: var(--text-primary);
   text-shadow: none;
@@ -41,7 +53,7 @@ p, address {
 
 /* Liens généraux */
 a {
-  color: var(--text-contrast);
+  color: var(--text-white);
   text-decoration: none;
   transition: var(--transition-default);
 }
@@ -52,8 +64,10 @@ a:hover {
 }
 
 /* Listes */
-ul, ol, li {
-  color: var(--text-contrast) !important;
+ul,
+ol,
+li {
+  color: var(--text-contrast);
 }
 
 /* Texte avec font monospace */
@@ -109,7 +123,7 @@ ul, ol, li {
 }
 
 .subcategory-heading {
-  color: var(--bg-con--text-contrast);
+  color: var(--text-contrast);
   font-family: var(--font-family-monospace);
   font-weight: 700;
   margin-bottom: 1rem;
@@ -120,20 +134,22 @@ ul, ol, li {
   font-size: 1rem;
 }
 
-#main .page-content >h1, h2 {
+#main .page-content > h1,
+h2 {
   color: var(--text-primary);
   font-family: var(--font-family-monospace);
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
-#main .page-content p > a, h3 {
+#main .page-content p > a,
+h3 {
   color: var(--text-light) !important;
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: 700;
 }
 
-.subtotal, .shipping {
+.subtotal,
+.shipping {
   color: var(--bg-secondary);
 }

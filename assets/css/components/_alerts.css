@@ -124,7 +124,7 @@
 
 .alert li {
   font-size: 1.1rem;
-  color: var(--bg-secondary) !important;
+  color: var(--text-contrast) !important;
   font-weight: 700;
 }
 

@@ -4,7 +4,7 @@ body #search_widget,
 body .header-top #search_widget,
 body #header #search_widget,
 body [id*="search_widget"] {
-  background: var(--text-contrast) !important;
+  background: var(--text-white) !important;
   border: 1px solid var(--glass-border) !important;
   border-radius: 25px !important;
   backdrop-filter: blur(15px) !important;
@@ -21,7 +21,7 @@ body #header #search_widget input,
 body [id*="search_widget"] input {
   width: 100% !important;
   font-size: 1.05rem !important;
-  background: var(--text-contrast) !important;
+  background: var(--text-white) !important;
   border: none !important;
   color: var(--bg-primary) !important;
   display: inline-flex !important;

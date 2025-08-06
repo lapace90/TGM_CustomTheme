@@ -24,7 +24,7 @@
  *}
 
 <div class="contact-rich">
-  <h4>{l s='Store information' d='Shop.Theme.Global'}</h4>
+  <h4 style="font-size: 1.4rem !important;">{l s='Store information' d='Shop.Theme.Global'}</h4>
   <div class="block">
     <div class="icon"><i class="material-icons">&#xE55F;</i></div>
     <div class="data">{$contact_infos.address.formatted nofilter}</div>

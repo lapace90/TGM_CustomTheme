@@ -169,3 +169,17 @@
     display: none !important;
   }
 }
+
+@media (max-width: 768px) {
+    .sort-container {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    .sort-label {
+        text-align: center;
+    }
+    .custom-sort-select {
+        max-width: none;
+    }
+}

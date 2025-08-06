@@ -26,6 +26,7 @@
 @import "components/_tables.css";
 @import "components/_searchbar.css";
 @import "components/_modals.css";
+@import "components/_filtres.css";
 
 /* ===== PAGES ===== */
 @import "pages/_product-list.css";
