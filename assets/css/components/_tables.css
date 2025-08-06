@@ -152,8 +152,17 @@ tr.table-info {
   padding: 12px 15px;
 }
 
-/* Liens dans les tableaux - Mieux visibles */
+.page-order-detail .box {
+  background: var(--bg-glass-light);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-primary);
+  box-shadow: var(--shadow-glass);
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
 
+/* Liens dans les tableaux - Mieux visibles */
 table a,
 .table a {
   color: var(--neon-blue);
@@ -262,7 +271,6 @@ table .btn,
   }
   
   th {
-    font-size: 0.75rem;
     letter-spacing: 0.5px;
   }
   

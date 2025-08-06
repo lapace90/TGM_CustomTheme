@@ -39,13 +39,13 @@ div {
   font-family: var(--font-family-sans-serif);
   font-size: 1rem;
   line-height: 1 !important;
-  color: var(--text-white);
+  /* color: var(--text-white); */
 }
 
 p,
 address {
   font-family: var(--font-family-sans-serif);
-  color: var(--text-primary);
+  color: var(--text-contrast);
   text-shadow: none;
   font-size: 1rem;
   line-height: 1;
@@ -61,6 +61,11 @@ a {
 a:hover {
   color: var(--neon-blue);
   text-shadow: 0 0 10px var(--neon-blue);
+}
+
+strong {
+  color: var(--text-contrast);
+  font-weight: 600;
 }
 
 /* Listes */
@@ -143,7 +148,7 @@ h2 {
 
 #main .page-content p > a,
 h3 {
-  color: var(--text-light) !important;
+  color: var(--text-light);
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: 700;
@@ -152,4 +157,11 @@ h3 {
 .subtotal,
 .shipping {
   color: var(--bg-secondary);
+}
+
+.page-order-detail h3 {
+  color: var(--text-contrast) !important;
+  font-family: var(--font-family-monospace);
+  font-weight: 600;
+  margin-bottom: 1rem;
 }

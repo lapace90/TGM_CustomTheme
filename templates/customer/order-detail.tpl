@@ -32,36 +32,37 @@
   {block name='order_infos'}
     <div id="order-infos">
       <div class="box">
-          <div class="row">
-            <div class="col-xs-{if $order.details.reorder_url}9{else}12{/if}">
-              <strong>
-                {l
-                  s='Order Reference %reference% - placed on %date%'
-                  d='Shop.Theme.Customeraccount'
-                  sprintf=['%reference%' => $order.details.reference, '%date%' => $order.details.order_date]
-                }
-              </strong>
-            </div>
-            {if $order.details.reorder_url}
-              <div class="col-xs-3 text-xs-right">
-                <a href="{$order.details.reorder_url}" class="button-primary">{l s='Reorder' d='Shop.Theme.Actions'}</a>
-              </div>
-            {/if}
-            <div class="clearfix"></div>
+        <div class="row">
+          <div class="col-xs-{if $order.details.reorder_url}9{else}12{/if}">
+            <strong>
+              {l
+                      s='Order Reference %reference% - placed on %date%'
+                      d='Shop.Theme.Customeraccount'
+                      sprintf=['%reference%' => $order.details.reference, '%date%' => $order.details.order_date]
+                    }
+            </strong>
           </div>
+          {if $order.details.reorder_url}
+            <div class="col-xs-3 text-xs-right">
+              <a href="{$order.details.reorder_url}" class="button-primary">{l s='Reorder' d='Shop.Theme.Actions'}</a>
+            </div>
+          {/if}
+          <div class="clearfix"></div>
+        </div>
       </div>
 
       <div class="box">
-          <ul>
+        <div class="row">
+          <ul class="col-xs-12 flex-left">
             <li><strong>{l s='Carrier' d='Shop.Theme.Checkout'}</strong> {$order.carrier.name}</li>
             <li><strong>{l s='Payment method' d='Shop.Theme.Checkout'}</strong> {$order.details.payment}</li>
 
             {if $order.details.invoice_url}
-              <li>
-                <a href="{$order.details.invoice_url}">
+              <div class="col-xs-12 text-right">
+                <a class="button-primary" href="{$order.details.invoice_url}">
                   {l s='Download your invoice as a PDF file.' d='Shop.Theme.Customeraccount'}
                 </a>
-              </li>
+              </div>
             {/if}
 
             {if $order.details.recyclable}
@@ -75,6 +76,7 @@
               <li>{l s='Message' d='Shop.Theme.Customeraccount'} {$order.details.gift_message nofilter}</li>
             {/if}
           </ul>
+        </div>
       </div>
     </div>
   {/block}
@@ -129,7 +131,9 @@
       {if $order.addresses.delivery}
         <div class="col-lg-6 col-md-6 col-sm-6">
           <article id="delivery-address" class="box">
-            <h4>{l s='Delivery address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.delivery.alias]}</h4>
+            <h4>
+              {l s='Delivery address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.delivery.alias]}
+            </h4>
             <address>{$order.addresses.delivery.formatted nofilter}</address>
           </article>
         </div>
@@ -137,7 +141,8 @@
 
       <div class="col-lg-6 col-md-6 col-sm-6">
         <article id="invoice-address" class="box">
-          <h4>{l s='Invoice address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.invoice.alias]}</h4>
+          <h4>{l s='Invoice address %alias%' d='Shop.Theme.Checkout' sprintf=['%alias%' => $order.addresses.invoice.alias]}
+          </h4>
           <address>{$order.addresses.invoice.formatted nofilter}</address>
         </article>
       </div>

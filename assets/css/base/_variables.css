@@ -71,6 +71,7 @@
 [data-theme="light"] h1{
   text-shadow: 0 0 5px var(--text-white) !important;
 }
+
 /* ===================================
    ÉLÉMENTS QUI RESTENT TOUJOURS SOMBRES
    =================================== */
