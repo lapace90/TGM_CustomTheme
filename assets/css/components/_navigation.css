@@ -243,3 +243,7 @@ li[data-depth="3"]:before {
   text-align: center;
 }
 
+#wrapper .breadcrumb li:last-child {
+  color: var(--text-white) !important;
+  text-shadow: none !important;
+}

@@ -24,8 +24,10 @@
   --shadow-neon: 0 0 15px var(--neon-blue);
   --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
   --text-shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  --text-shadow-light: 1px 1px 2px rgba(0, 0, 0, 0.5);
   /* Layout */
   --radius-primary: 15px;
+  --radius-circle: 50%;
   /* Typographie */
   --font-family-sans-serif: "Rajdhani", sans-serif;
   --font-family-monospace: "Orbitron", monospace;
@@ -68,8 +70,12 @@
 [data-theme="light"] #main section.page-content {
   background: var(--text-white) !important;
 }
-[data-theme="light"] h1{
+[data-theme="light"] h1 {
   text-shadow: 0 0 5px var(--text-white) !important;
+}
+
+[data-theme="light"] .active_filters .active-filter-title {
+  text-shadow: none !important;
 }
 
 /* ===================================
@@ -144,6 +150,5 @@ body > footer,
 /* Transitions pour le reste du contenu */
 * {
   transition: background-color var(--transition-default),
-    border-color var(--transition-default), 
-    box-shadow var(--transition-default);
+    border-color var(--transition-default), box-shadow var(--transition-default);
 }

@@ -1,7 +1,7 @@
 /* ===== TYPOGRAPHIE GLOBALE ===== */
 
 /* Titres */
-h1 {
+h1, .h1 {
   color: var(--text-contrast);
   font-family: var(--font-family-monospace) !important;
   font-size: 2rem !important;
@@ -42,7 +42,7 @@ div {
   /* color: var(--text-white); */
 }
 
-p,
+
 address {
   font-family: var(--font-family-sans-serif);
   color: var(--text-contrast);
@@ -165,3 +165,4 @@ h3 {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+

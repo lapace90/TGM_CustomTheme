@@ -39,8 +39,8 @@
           <th>{l s='Date' d='Shop.Theme.Checkout'}</th>
           <th>{l s='Total price' d='Shop.Theme.Checkout'}</th>
           <th class="hidden-md-down">{l s='Payment' d='Shop.Theme.Checkout'}</th>
-          <th class="hidden-md-down">{l s='Status' d='Shop.Theme.Checkout'}</th>
-          <th>{l s='Invoice' d='Shop.Theme.Checkout'}</th>
+          <th>{l s='Status' d='Shop.Theme.Checkout'}</th>
+          <th class="hidden-md-down">{l s='Invoice' d='Shop.Theme.Checkout'}</th>
           <th>&nbsp;</th>
         </tr>
       </thead>

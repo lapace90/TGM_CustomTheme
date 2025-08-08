@@ -29,6 +29,18 @@
 {/block}
 
 {block name='page_content'}
+  <style>
+    @media (max-width: 989px) {
+      #order-infos .text-right {
+        text-align: left !important;
+        margin-top: 15px;
+      }
+      #order-infos .button-primary {
+        display: inline-block !important;
+      }
+    }
+  </style>
+  
   {block name='order_infos'}
     <div id="order-infos">
       <div class="box">
@@ -43,7 +55,7 @@
             </strong>
           </div>
           {if $order.details.reorder_url}
-            <div class="col-xs-3 text-xs-right">
+            <div class="col-xs-12 text-right">
               <a href="{$order.details.reorder_url}" class="button-primary">{l s='Reorder' d='Shop.Theme.Actions'}</a>
             </div>
           {/if}

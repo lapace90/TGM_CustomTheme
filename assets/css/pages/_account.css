@@ -4,7 +4,7 @@
 .js-content-wrapper .links {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 1.5rem !important;
+  gap: 1rem !important;
   justify-content: center !important;
   
 }
@@ -160,4 +160,5 @@
   transition: color 0.3s ease, transform 0.3s ease;
   text-shadow: 0 0 15px white !important;
 }
+
 

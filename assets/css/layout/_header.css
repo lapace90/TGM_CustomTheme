@@ -117,11 +117,6 @@
     top: 0 !important;
     left: 100% !important;
 }
-.modal-header >
-h5.modal-title {
-   color: var(--bg-secondary) !important;
- }
-
 
  .header-top .theme-switch-wrapper,
 .header-nav .theme-switch-wrapper {

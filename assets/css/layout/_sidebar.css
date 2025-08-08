@@ -19,7 +19,7 @@
 
 /* Labels des facettes */
 [id^="facet_label_"] {
-  color: var(--bg-contrast) !important;
+  color: var(--text-secondary) !important;
   text-transform: uppercase !important;
   font-family: var(--font-family-sans-serif) !important;
   text-shadow: none !important;

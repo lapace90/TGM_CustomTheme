@@ -1,7 +1,7 @@
 /* ===== FOOTER CYBERPUNK ===== */
 #footer {
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--glass-border);
+  background: var(--bg-secondary) !important;
+  border-top: 1px solid var(--glass-border) !important;
   position: relative;
   overflow: hidden;
 }
@@ -73,11 +73,16 @@ p.text-sm-center {
   box-shadow: none !important;
   transition: all 0.3s ease !important;
   text-decoration: none !important;
-  color: #f8f8f8 !important;
+  color: var(--text-white) !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   position: relative !important;
+  background-color: transparent !important;
+}
+
+.block-contact > .contact-infos {
+  color: var(--text-white);
 }
 
 #footer .links a:hover {
@@ -109,3 +114,4 @@ p.text-sm-center {
   color: var(--text-light) !important;
   text-shadow: none !important;
 }
+

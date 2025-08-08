@@ -1,0 +1,21 @@
+
+.wishlist-add-to-new {
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+.wishlist-list .wishlist-list-item p {
+  font-size: 1.1rem !important;
+  text-shadow: none !important;
+}
+
+.wishlist-modal .close > span {
+  color: var(--text-white) !important;
+  font-size: 3rem !important;
+}
+
+.modal-header >
+h5.modal-title {
+   color: var(--bg-secondary) !important;
+   text-shadow: var(--text-shadow-light) !important;
+ }

@@ -42,5 +42,5 @@
 
 /* ===== RESPONSIVE ===== */
 @import "responsive/_mobile.css";
-@import "responsive/_tablet.css";
+/* @import "responsive/_tablet.css"; */
 /* @import "responsive/_desktop.css"; */
