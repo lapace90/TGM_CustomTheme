@@ -143,8 +143,6 @@ span.product-price.float-xs-right {
 #order-items .h3, .h3 {
   font-size: 1.2rem !important;
   font-weight: bold;
-  text-shadow: 0 0 4px var(--neon-blue);
-  color: var(--text-contrast) !important;
 }
 
 h3.h1 {
