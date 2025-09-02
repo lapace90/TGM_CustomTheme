@@ -12,7 +12,7 @@
 /* Labels */
 #customer-form label,
 form label {
-  color: var(--text-contrast) !important;
+  color: var(--text-contrast);
   font-size: 1.1rem;
   font-weight: 600 !important;
   font-family: var(--font-family-sans-serif);
@@ -153,4 +153,7 @@ input[type="search"] {
 }
 input[type="search"]::placeholder {
   color: var(--text-secondary) !important;
+}
+#order-confirmation #registration-form {
+  width: 100% !important;
 }

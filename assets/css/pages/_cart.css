@@ -156,3 +156,8 @@ h3.h1 {
   color: var(--text-secondary) !important;
   font-weight: bold;
 }
+
+
+body#checkout #wrapper {
+  min-height: calc(100vh - 145px) !important;
+}

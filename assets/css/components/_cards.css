@@ -228,3 +228,8 @@ address {
 .page-addresses .addresses-footer a i {
   color: var(--text-contrast) !important;
 }
+
+.product-miniature .regular-price {
+  text-shadow: none !important;
+  color: antiquewhite !important;
+}

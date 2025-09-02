@@ -166,3 +166,23 @@ h3 {
   margin-bottom: 1rem;
 }
 
+div.no-account > a,
+div.forgot-password > a {
+  color: #24b9d7 !important;
+}
+
+span.no-items {
+  color: var(--text-primary) !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+
+form .form-control-label,
+#use_same_address > label, form label {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+.page-heading {
+  color: var(--bg-secondary) !important;
+}
