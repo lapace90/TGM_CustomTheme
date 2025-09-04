@@ -73,25 +73,3 @@
 
 }
 
-#search_widget button:hover {
-  box-shadow: 0 0 30px var(--neon-blue);
-}
-
-/* ===== FORMULAIRES ===== */
-
-.search i {
-  color: var(--text-light) !important;
-margin: 10px;
-}
-#search_widget input {
-  border: 1px solid var(--glass-border);
-  border-radius: 10px;
-  color: var(--bg-primary) !important;
-}
-
-.ui-autocomplete-input {
-  background: var(--text-white) !important;
-
-  border-radius: 10px !important;
-  transition: var(--transition-default);
-}

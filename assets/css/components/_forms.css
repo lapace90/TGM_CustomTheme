@@ -1,4 +1,4 @@
-/* Formulaire client */
+/* ===== WRAPPER FORM CLIENTE ===== */
 #customer-form {
   background: var(--bg-glass);
   border: 1px solid var(--glass-border);
@@ -9,30 +9,37 @@
   width: 100%;
   margin: 2rem auto;
 }
-/* Labels */
+
+/* ===== LABELS ===== */
 #customer-form label,
 form label {
   color: var(--text-contrast);
   font-size: 1.1rem;
-  font-weight: 600 !important;
+  font-weight: 600;
   font-family: var(--font-family-sans-serif);
   line-height: 1.2;
 }
-/* Champs de saisie généraux */
+
+/* ===== BASE CAMPI (tema vetroso) ===== */
 .form-control,
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="number"],
-textarea {
-  background: rgba(0, 0, 0, 0.2) !important;
-  border: 1px solid var(--glass-border) !important;
+input,
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid var(--neon-blue) !important;
   border-radius: 10px !important;
   color: var(--text-contrast) !important;
-  transition: var(--transition-default);
+  padding: 12px 15px !important;
+  backdrop-filter: blur(10px);
 }
-/* Focus sur les champs */
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+/* ===== FOCUS UNIFICATO ===== */
 .form-control:focus,
 input:focus,
 select:focus,
@@ -41,34 +48,20 @@ textarea:focus {
   box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
   outline: none !important;
 }
-/* Formulaire client spécifique */
+
+/* ===== VARIANTE SCURA SOLO DENTRO #customer-form ===== */
 #customer-form .form-control,
 #customer-form input,
 #customer-form select,
 #customer-form textarea {
   background: rgba(0, 0, 0, 0.4) !important;
-  border: 1px solid var(--glass-border) !important;
-  border-radius: 10px !important;
-  color: var(--text-contrast) !important;
- 
-}
-#customer-form .form-control:focus,
-#customer-form input:focus,
-#customer-form select:focus {
-  border-color: var(--neon-blue) !important;
-  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
-  outline: none !important;
- 
 }
 
-/* ===== ADAPTATION MODE CLAIR POUR LES INPUTS ===== */
+/* ===== TEMA CHIARO ===== */
 [data-theme="light"] .form-control,
-[data-theme="light"] input[type="text"],
-[data-theme="light"] input[type="email"],
-[data-theme="light"] input[type="password"],
-[data-theme="light"] input[type="tel"],
-[data-theme="light"] input[type="number"],
-[data-theme="light"] textarea {
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
   background: rgba(255, 255, 255, 0.8) !important;
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
   color: var(--text-contrast) !important;
@@ -79,81 +72,145 @@ textarea:focus {
 [data-theme="light"] #customer-form select,
 [data-theme="light"] #customer-form textarea {
   background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(0, 0, 0, 0.2) !important;
-  color: var(--text-contrast) !important;
 }
 
 [data-theme="light"] .form-control:focus,
 [data-theme="light"] input:focus,
 [data-theme="light"] select:focus,
-[data-theme="light"] textarea:focus,
-[data-theme="light"] #customer-form .form-control:focus,
-[data-theme="light"] #customer-form input:focus,
-[data-theme="light"] #customer-form select:focus {
+[data-theme="light"] textarea:focus {
   border-color: var(--neon-blue) !important;
   box-shadow: 0 0 15px rgba(0, 245, 255, 0.2) !important;
   background: rgba(255, 255, 255, 0.95) !important;
 }
 
-/* Barre de recherche adaptée pour le mode clair */
+/* ===== SEARCH (header) ===== */
+input[type="search"] {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-contrast) !important;
+  padding: 12px 18px !important;
+}
+input[type="search"]::placeholder {
+  color: var(--text-secondary) !important;
+}
+
 [data-theme="light"] input[type="search"] {
   background: rgba(255, 255, 255, 0.8) !important;
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
-  color: var(--text-contrast) !important;
 }
-
 [data-theme="light"] input[type="search"]:focus {
   background: rgba(255, 255, 255, 0.95) !important;
   box-shadow: 0 0 15px rgba(0, 245, 255, 0.2) !important;
 }
-
 [data-theme="light"] input[type="search"]::placeholder {
   color: var(--text-secondary) !important;
 }
 
-/* Boutons dans les formulaires */
+/* ===== STATI SPECIALI ===== */
+.form-control:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ) !important; /* o un var(--bg-disabled) dedicato */
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ===== BOTTONI / VARIE ===== */
 #customer-form .btn-primary:hover {
   box-shadow: 0 0 25px var(--neon-blue);
   transform: translateY(-2px);
 }
-/* Bouton show/hide password */
 .btn-show {
   box-shadow: none !important;
   border-radius: 10px;
   line-height: 1.8 !important;
   margin-left: 5px !important;
 }
-/* Messages de validation */
+
+/* ===== VALIDAZIONE (attenzione: nasconde i messaggi) ===== */
 .invalid-feedback,
 .form-control-comment,
 .help-block {
   display: none !important;
 }
-/* Enlever les bordures de validation */
-*[style*="border"]:not(.btn) {
-  border: 1px solid var(--glass-border) !important;
-}
-/* Reset des styles de validation Bootstrap */
+
 .was-validated .form-control:valid,
-.form-control.is-valid {
-  border-color: var(--glass-border) !important;
-  box-shadow: none !important;
-}
+.form-control.is-valid,
 .was-validated .form-control:invalid,
 .form-control.is-invalid {
   border-color: var(--glass-border) !important;
   box-shadow: none !important;
 }
-/* Barre de recherche du header */
-input[type="search"] {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--glass-border);
-  color: var(--text-contrast) !important;
-  padding: 12px 18px;
-}
-input[type="search"]::placeholder {
-  color: var(--text-secondary) !important;
-}
+
+/* ===== VARIE ===== */
 #order-confirmation #registration-form {
   width: 100% !important;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+optgroup {
+  font-weight: 700;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
 }

@@ -28,7 +28,33 @@ th {
   border-bottom: 1px solid var(--glass-border) !important;
   border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-
+.table-labeled th {
+  vertical-align: middle;
+}
+.table-labeled td {
+  vertical-align: middle;
+}
+.table-labeled .label {
+  padding: 0.25rem 0.375rem;
+  margin: 0.125rem;
+  font-size: inherit;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+.page-order .table {
+  margin-bottom: 0;
+}
+.page-order table th {
+  padding: 0.5rem;
+}
+.page-order table td {
+  padding: 0.5rem;
+}
+.page-order table thead th {
+  text-align: center;
+}
 /* Dernière colonne sans bordure droite */
 td:last-child,
 th:last-child {
@@ -203,12 +229,13 @@ table .btn,
   color: var(--text-contrast) !important;
   border-bottom-color: rgba(0, 0, 0, 0.1) !important;
   border-right-color: rgba(0, 0, 0, 0.05) !important;
+  text-shadow: none !important;
 }
 
 [data-theme="light"] th {
   background: rgba(0, 0, 0, 0.05) !important;
   border-bottom: 2px solid var(--neon-blue) !important;
-  border-right-color: rgba(0, 0, 0, 0.1) !important;
+  border-right-color: rgba(0, 0, 0, 0.1) !important;  
 }
 
 [data-theme="light"] tbody tr:nth-child(even) {

@@ -96,6 +96,7 @@ p.text-sm-center {
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 1.5rem;
+  min-width: 100%;
 }
 
 #footer .block_newsletter p {

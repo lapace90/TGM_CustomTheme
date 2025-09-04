@@ -8,7 +8,7 @@ assets:
   js:
     all:
       - id: custom-script
-      - path: assets/js/menu-enhanced.js
+        path: assets/js/menu-enhanced.js
         priority: 1000
 name: TGM_CustomTheme
 display_name: TGM Custom Theme

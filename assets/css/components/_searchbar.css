@@ -37,7 +37,7 @@ body [id*="search_widget"] input::placeholder {
   color: var(--text-secondary) !important;
   text-shadow: none !important;
   font-size: 1.05rem !important;
-  padding: 15px 25px !important;
+  margin: 2rem !important;
 }
 
 /* Bouton */
@@ -47,7 +47,6 @@ body #header #search_widget button {
   background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)) !important;
   border: none !important;
   color: var(--text-contrast) !important;
-  padding: 15px 25px !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
   cursor: pointer !important;
@@ -78,4 +77,17 @@ body #header #search_widget form i {
   body #search_widget {
     min-width: 350px !important;
   }
+}
+.header-top .search-widgets form input[type="text"] {
+  width: 100%;
+  min-width: inherit;
+  color: #9b9b9b;
+  background: #f6f6f6;
+  padding-left: 3rem;
+}
+.header-top .search-widgets form input[type="text"]:focus {
+  background: #fff;
+}
+#search_widget form input[type="text"] {
+  padding-left: 2.5rem !important;
 }

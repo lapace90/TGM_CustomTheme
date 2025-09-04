@@ -19,6 +19,34 @@ h5 {
   text-transform: none !important;
 }
 
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+
 #subcategories ul li .subcategory-name {
   font-size: 1.1rem;
 }
@@ -31,6 +59,12 @@ h6 {
   color: var(--text-contrast);
   font-weight: 500;
   font-family: var(--font-family-sans-serif);
+  margin-bottom: 1.125rem;
+}
+
+#main .page-content h6 {
+  margin-bottom: 1.125rem;
+  text-shadow: none;
 }
 
 /* Paragraphes et textes */
@@ -42,7 +76,6 @@ div {
   /* color: var(--text-white); */
 }
 
-
 address {
   font-family: var(--font-family-sans-serif);
   color: var(--text-contrast);
@@ -53,7 +86,6 @@ address {
 
 /* Liens généraux */
 a {
-  color: var(--text-white);
   text-decoration: none;
   transition: var(--transition-default);
 }
@@ -185,4 +217,16 @@ form .form-control-label,
 
 .page-heading {
   color: var(--bg-secondary) !important;
+}
+
+a.dropdown-item {
+  color: var(--text-white) !important;
+}
+a.nav-link.active.js-product-nav-active {
+  color: #24b9d7 !important;
+  text-shadow: none !important;
+}
+.product-flags.js-product-flags span {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
 }
