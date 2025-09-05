@@ -212,6 +212,117 @@ h1.product-title {
   line-height: 40px;
 }
 
-body#checkout .container-blockreassurance {
-  min-height: auto;
+.social-sharing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.social-sharing ul {
+  margin-bottom: 0;
+}
+.social-sharing li {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 0.25rem 0.25rem;
+  background-size: 2rem 2rem;
+  border-radius: 50%;
+}
+.social-sharing li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.social-sharing li a:hover {
+  color: transparent;
+}
+
+
+#manufacturer #main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+#manufacturer #main ul .brand {
+  position: relative;
+  width: calc(20% - 10px);
+  min-width: 210px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  background: #fff;
+  transition: 0.4s ease-out;
+}
+#manufacturer #main ul .brand-infos a {
+  display: inline-block;
+}
+#manufacturer #main ul .brand:hover {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+#manufacturer #main ul .brand-products {
+  display: none;
+}
+#manufacturer #main ul .brand-img {
+  position: relative;
+  width: 200px;
+  margin: auto;
+}
+#manufacturer #main ul .brand-img a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+@media (max-width: 991px) {
+  #manufacturer #main ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+#post-product-comment-form input.error,
+#post-product-comment-form textarea.error {
+  background-color: #f2dede;
+  border: solid 1px #ebcccc;
+}
+#post-product-comment-form input.valid,
+#post-product-comment-form textarea.valid {
+  border: solid 1px #d0e9c6;
+}
+#post-product-comment-form input.error,
+#post-product-comment-form textarea.error {
+  background-color: #f2dede;
+  border: solid 1px #ebcccc;
+}
+#post-product-comment-form input.valid,
+#post-product-comment-form textarea.valid {
+  border: solid 1px #d0e9c6;
 }

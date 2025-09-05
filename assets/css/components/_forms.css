@@ -25,10 +25,10 @@ form label {
 input,
 textarea,
 select {
-  background: rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--neon-blue) !important;
   border-radius: 10px !important;
-  color: var(--text-contrast) !important;
+  color: var(--text-contrast);
   padding: 12px 15px !important;
   backdrop-filter: blur(10px);
 }
@@ -213,4 +213,152 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
+}
+.radio-inline .custom-radio {
+  margin-right: 0.5rem;
+}
+.radio-inline:first-of-type {
+  margin-right: 1rem;
+}
+form section .form-informations {
+  display: inline-block;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  
+}
+form section .form-informations-title,
+form section .form-informations-option {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+form .form-control-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  
+}
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.1rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #fff;
+  border: #979797 1px solid;
+  border-radius: 50%;
+}
+.custom-radio input[type="radio"] {
+  cursor: pointer;
+  opacity: 0;
+}
+.custom-radio input[type="radio"]:checked + span {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #24b9d7;
+  border-radius: 50%;
+}
+.custom-radio input[type="radio"]:focus + span {
+  border-color: #7a7a7a;
+}
+.custom-checkbox {
+  position: relative;
+}
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.25rem;
+  cursor: pointer;
+  opacity: 0;
+}
+.custom-checkbox input[type="checkbox"] + span {
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  pointer-events: none;
+  cursor: pointer;
+  border: 1px #979797 solid;
+}
+.custom-checkbox input[type="checkbox"] + span .checkbox-checked {
+  display: none;
+  margin: -0.125rem;
+  font-size: 1.25rem;
+  
+}
+.custom-checkbox input[type="checkbox"]:checked + span .checkbox-checked {
+  display: block;
+}
+.custom-checkbox input[type="checkbox"]:focus + span {
+  border-color: #7a7a7a;
+}
+.custom-checkbox label {
+  text-align: left;
+}
+
+.radio-inline .custom-radio {
+  margin-right: 0.5rem;
+}
+.radio-inline:first-of-type {
+  margin-right: 1rem;
+}
+form section .form-informations {
+  display: inline-block;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  
+}
+form section .form-informations-title,
+form section .form-informations-option {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+form .form-control-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  
+}
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.1rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #fff;
+  border: #979797 1px solid;
+  border-radius: 50%;
+}
+.custom-radio input[type="radio"] {
+  cursor: pointer;
+  opacity: 0;
+}
+.custom-radio input[type="radio"]:checked + span {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.25rem;
+  cursor: pointer;
+  opacity: 0;
 }

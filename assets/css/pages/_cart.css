@@ -59,6 +59,63 @@ div.input-group.bootstrap-touchspin {
   overflow: hidden;
   z-index: 1;
 }
+.group-span-filestyle .btn-default,
+.group-span-filestyle .bootstrap-touchspin .btn-touchspin,
+.bootstrap-touchspin .group-span-filestyle .btn-touchspin {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+  background: #24b9d7;
+  border-radius: 0;
+}
+.bootstrap-touchspin {
+  display: inline-block;
+  width: auto;
+}
+.bootstrap-touchspin input:focus {
+  outline: none;
+}
+.bootstrap-touchspin input.form-control,
+.bootstrap-touchspin input.input-group {
+  float: left;
+  width: 3rem;
+  height: 2.5rem;
+  padding: 0.175rem 0.5rem;
+  color: grey;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.bootstrap-touchspin .btn-touchspin {
+  height: 1.3125rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.bootstrap-touchspin .btn-touchspin:hover {
+  background-color: #f6f6f6;
+}
+.bootstrap-touchspin .input-group-btn-vertical {
+  float: left;
+  width: auto;
+  
+}
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
+  border-radius: 0;
+}
+.bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+  border-radius: 0;
+}
+.bootstrap-touchspin .input-group-btn-vertical .touchspin-up::after {
+  content: "\E5CE";
+}
+.bootstrap-touchspin .input-group-btn-vertical .touchspin-down::after {
+  content: "\E5CF";
+}
+.bootstrap-touchspin .input-group-btn-vertical i {
+  top: 0.0625rem;
+  left: 0.1875rem;
+  font-size: 0.9375rem;
+}
 
 /* Bouton code promo */
 .promo-code-button.display-promo {
@@ -86,8 +143,8 @@ a.js-show-details:focus-visible {
   font-weight: bold;
 }
 span.product-quantity {
-  color: var(--text-contrast);
-  background: rgba(0, 0, 0, 0.4);
+  color: var(--bg-secondary) !important;
+  background: rgba(252, 252, 252, 0.63) !important;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-primary) !important;
   padding: .6rem !important;
@@ -143,12 +200,6 @@ p > a {
 .h3 {
   font-size: 1.2rem !important;
   font-weight: bold;
-}
-h3.h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--text-secondary) !important;
-  text-shadow: 0 0 4px var(--neon-green);
 }
 .col-md-12 > strong {
   color: var(--text-secondary) !important;
@@ -646,4 +697,16 @@ body#checkout
   #blockcart-modal .modal-body {
     padding: 1rem;
   }
+}
+#header .blockcart {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  height: auto;
+}
+#header .blockcart a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px;
+  padding: 5px 10px;
 }

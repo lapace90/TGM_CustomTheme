@@ -27,6 +27,8 @@
 @import "components/_searchbar.css";
 @import "components/_modals.css";
 @import "components/_filtres.css";
+@import "components/_carousel.css";
+@import "components/_menu.css";
 
 /* ===== PAGES ===== */
 @import "pages/_product-list.css";
@@ -34,6 +36,11 @@
 @import "pages/_contact.css";
 @import "pages/_product-detail.css";
 @import "pages/_cart.css";
+@import "pages/_orders.css";
+@import "pages/_wishlist.css";
+@import "pages/_products.css";
+@import "pages/_checkout.css";
+@import "pages/_category.css";
 
 /* ===== UTILITIES ===== */
 @import "utilities/_animations.css";

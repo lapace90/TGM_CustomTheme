@@ -90,4 +90,5 @@ body #header #search_widget form i {
 }
 #search_widget form input[type="text"] {
   padding-left: 2.5rem !important;
+  color: var(--text-dark) !important;
 }

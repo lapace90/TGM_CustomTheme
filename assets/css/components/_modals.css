@@ -1,21 +1,476 @@
+/* ===========================
+   MODALS — Drop-in Clean
+   (no selector renames)
+   =========================== */
 
-.wishlist-add-to-new {
-  font-weight: 600 !important;
-  text-shadow: none !important;
+/* Titre de modal */
+.modal-header > h5.modal-title {
+  color: var(--bg-secondary) !important;
+  text-shadow: var(--text-shadow-light) !important;
 }
 
-.wishlist-list .wishlist-list-item p {
-  font-size: 1.1rem !important;
-  text-shadow: none !important;
+/* ---------- Customization modal ---------- */
+.customization-modal .modal-content {
+  border: 1px solid var(--glass-border, #f6f6f6);
+  border-radius: 0; /* tu avais volontairement 0 ici */
+}
+.customization-modal .modal-content .modal-body {
+  padding-top: 0;
+}
+.customization-modal .modal-content .modal-body .product-customization-line {
+  padding: 0.9375rem 0;
+  border-bottom: 1px solid var(--glass-border, #f6f6f6);
+}
+.customization-modal
+  .modal-content
+  .modal-body
+  .product-customization-line
+  .label {
+  font-weight: 600;
+  text-align: right;
+}
+.customization-modal
+  .modal-content
+  .modal-body
+  .product-customization-line:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
-.wishlist-modal .close > span {
-  color: var(--text-white) !important;
-  font-size: 3rem !important;
+/* ---------- Product comment modal ---------- */
+.product-comment-modal .modal-header {
+  border: none;
+  padding: 30px 30px 15px;
+}
+.product-comment-modal .modal-body {
+  padding: 15px 30px 30px;
+}
+.product-comment-modal .modal-header .h2 {
+  float: left;
+  font-size: 20px;
+}
+.product-comment-modal .modal-dialog {
+  width: calc(100% - 30px);
+  max-width: 774px;
+}
+.product-comment-modal .modal-dialog .h3 {
+  font-size: 14px;
+}
+.product-comment-modal .modal-dialog .product-flag {
+  display: none;
+}
+.product-comment-modal .modal-dialog .product-cover,
+.product-comment-modal .modal-dialog .product-cover img {
+  width: 99px;
+  height: 99px;
+}
+.product-comment-modal label.form-label {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.product-comment-modal input,
+.product-comment-modal textarea {
+  width: 100%;
+  border: 1px solid var(--glass-border, #bfbfbf);
+}
+.product-comment-modal input {
+  height: 44px;
+  padding: 0 10px;
+}
+.product-comment-modal textarea {
+  min-height: 80px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.product-comment-modal .btn-comment,
+.product-comment-modal .btn-comment-inverse {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.product-comment-modal .required {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.product-comment-modal .post-comment-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.product-comment-modal .post-comment-buttons .btn-comment {
+  margin-left: 15px;
+}
+#product-comment-posted-modal .post-comment-buttons,
+#product-comment-post-error .post-comment-buttons,
+#update-comment-usefulness-post-error .post-comment-buttons {
+  margin-top: 30px;
 }
 
-.modal-header >
-h5.modal-title {
-   color: var(--bg-secondary) !important;
-   text-shadow: var(--text-shadow-light) !important;
- }
+/* ---------- Icons feedback ---------- */
+.modal-header .material-icons {
+  color: #40a85f;
+  font-size: 30px;
+  line-height: 25px;
+}
+.modal-header .material-icons.error {
+  color: #a94442;
+}
+.modal-header .material-icons.feedback {
+  color: #f39d72;
+}
+
+/* ---------- Rating in post modal ---------- */
+#post-product-comment-modal .star-content div.star a {
+  display: block;
+  position: absolute;
+  text-indent: -5000px;
+}
+#post-product-comment-modal .criterion-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#post-product-comment-modal .criterion-rating label {
+  color: #363a41;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ---------- Base Bootstrap-like modal ---------- */
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--text-white, #fff);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+/* Sizes */
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    max-width: 900px;
+  }
+}
+
+/* Centered dialog */
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - (30px * 2));
+}
+
+/* ---------- Product modal (gallery) ---------- */
+#product-modal .modal-content {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+#product-modal .modal-content .modal-body {
+  display: flex;
+  margin-left: -30%;
+}
+#product-modal .modal-content .modal-body .product-cover-modal {
+  background: var(--text-white, #fff);
+}
+#product-modal .modal-content .modal-body .image-caption {
+  width: 100%;
+  padding: 0.625rem 1.25rem;
+  background: var(--text-white, #fff);
+  border-top: 1px solid var(--glass-border, #f6f6f6);
+}
+#product-modal .modal-content .modal-body .image-caption p,
+#product-modal
+  .modal-content
+  .modal-body
+  .image-caption
+  .page-content.page-cms
+  ul,
+.page-content.page-cms
+  #product-modal
+  .modal-content
+  .modal-body
+  .image-caption
+  ul {
+  margin-bottom: 0;
+}
+#product-modal .modal-content .modal-body .thumbnails {
+  position: relative;
+}
+#product-modal .modal-content .modal-body .mask {
+  position: relative;
+  z-index: 1;
+  max-height: 49.38rem;
+  margin-top: 2.188rem;
+  overflow: hidden;
+}
+#product-modal .modal-content .modal-body .mask.nomargin {
+  margin-top: 0;
+}
+#product-modal .modal-content .modal-body .product-images {
+  margin-left: 2.5rem;
+}
+#product-modal .modal-content .modal-body .product-images img {
+  width: 9.25rem;
+  cursor: pointer;
+  background: var(--text-white, #fff);
+}
+#product-modal .modal-content .modal-body .product-images img:hover {
+  border: 3px solid #24b9d7;
+}
+#product-modal .modal-content .modal-body .arrows {
+  position: absolute;
+  top: 0;
+  right: 1.875rem;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+#product-modal .modal-content .modal-body .arrows .arrow-up {
+  position: absolute;
+  top: -2rem;
+  opacity: 0.2;
+}
+#product-modal .modal-content .modal-body .arrows .arrow-down {
+  position: absolute;
+  bottom: -2rem;
+}
+#product-modal .modal-content .modal-body .arrows i {
+  display: inline;
+  font-size: 6.25rem;
+}
+
+/* Responsive for product modal */
+@media (max-width: 991px) {
+  .product-cover img {
+    width: 100%;
+    height: auto;
+  }
+  #product-modal .modal-content .modal-body {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  #product-modal .modal-content .modal-body .arrows {
+    display: none;
+  }
+  #product-modal .modal-content .modal-body .image-caption {
+    width: 100%;
+  }
+  .product-images > li.thumb-container > .thumb:not(.selected) {
+    border: none;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.5;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    max-width: 900px;
+  }
+}

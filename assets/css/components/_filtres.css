@@ -37,7 +37,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   background: rgba(0, 0, 0, 0.2);
-  color: var(--text-contrast);
+  color: var(--text-contrast) !important;
   border: 1px solid var(--glass-border);
   border-radius: 10px;
   text-shadow: none !important;

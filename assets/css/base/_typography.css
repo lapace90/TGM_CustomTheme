@@ -60,6 +60,7 @@ h6 {
   font-weight: 500;
   font-family: var(--font-family-sans-serif);
   margin-bottom: 1.125rem;
+  font-size: 1.15rem;
 }
 
 #main .page-content h6 {
@@ -74,14 +75,6 @@ div {
   font-size: 1rem;
   line-height: 1 !important;
   /* color: var(--text-white); */
-}
-
-address {
-  font-family: var(--font-family-sans-serif);
-  color: var(--text-contrast);
-  text-shadow: none;
-  font-size: 1rem;
-  line-height: 1;
 }
 
 /* Liens généraux */
@@ -105,6 +98,7 @@ ul,
 ol,
 li {
   color: var(--text-contrast);
+  padding: .3rem;
 }
 
 /* Texte avec font monospace */
@@ -191,13 +185,6 @@ h3 {
   color: var(--bg-secondary);
 }
 
-.page-order-detail h3 {
-  color: var(--text-contrast) !important;
-  font-family: var(--font-family-monospace);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
 div.no-account > a,
 div.forgot-password > a {
   color: #24b9d7 !important;
@@ -229,4 +216,7 @@ a.nav-link.active.js-product-nav-active {
 .product-flags.js-product-flags span {
   color: var(--text-primary) !important;
   font-weight: 600 !important;
+}
+.text-sm-center {
+  text-align: center !important;
 }

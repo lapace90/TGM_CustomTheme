@@ -6,7 +6,38 @@
   flex-wrap: wrap !important;
   gap: 1rem !important;
   justify-content: center !important;
-  
+}
+
+.page-my-account #content .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.page-my-account #content .links a {
+  display: inline-block;
+  padding: 0 0.9375rem;
+  margin-bottom: 1.875rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page-my-account #content .links a span.link-item {
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  background: #fff;
+}
+.page-my-account #content .links a i {
+  display: block;
+  width: 100%;
+  padding-bottom: 3.4rem;
+  font-size: 2.6rem;
 }
 
 /* Chaque lien de compte */
@@ -31,7 +62,7 @@
       rgba(255, 0, 128, 0.2) 0%,
       transparent 50%
     ) !important;
-  background-attachment:local;
+  background-attachment: local;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 20px !important;
   padding: 2rem 1.5rem !important;
@@ -156,13 +187,304 @@
   border-radius: var(--radius-primary) !important;
 }
 
-.js-content-wrapper .links a i.material-icons, .links a .material-icons {
+.js-content-wrapper .links a i.material-icons,
+.links a .material-icons {
   transition: color 0.3s ease, transform 0.3s ease;
   text-shadow: 0 0 15px white !important;
 }
 
-
 .page-authentication #content {
   width: 90% !important;
   max-width: 100% !important;
+}
+
+.blockcms-title,
+.myaccount-title,
+.myaccount-title a,
+.block-contact-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.blockcms-title,
+.myaccount-title,
+.myaccount-title a,
+.block-contact-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+#block_myaccount_infos .myaccount-title a {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+#block_myaccount_infos .myaccount-title a:hover {
+  color: var(--neon-green);
+  text-shadow: 0 0 20px var(--neon-blue);
+  transition: ease-in-out, 0.5s;
+}
+
+.page-customer-account #content {
+  padding: 1rem;
+  background: #fff;
+  font-size: 0.875rem;
+  color: #7a7a7a;
+}
+.page-customer-account #content .order-actions a {
+  padding: 0 0.125rem;
+}
+.page-customer-account #content .forgot-password {
+  padding-bottom: 0.9375rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+.page-customer-account #content .no-account {
+  font-size: 1rem;
+  text-align: center;
+}
+.page-authentication #content {
+  padding: 1rem;
+  background: #fff;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.page-addresses .address .address-body {
+  padding: 1rem;
+}
+
+.page-addresses .address .address-footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #7a7a7a;
+}
+.page-addresses .address .address-footer a {
+  margin-right: 0.5rem;
+  color: #7a7a7a;
+}
+
+.page-addresses .address .address-footer a i {
+  font-size: 1rem;
+}
+.page-addresses .address .address-footer a span {
+  font-size: 0.9375rem;
+  vertical-align: middle;
+}
+.page-addresses .addresses-footer {
+  margin: 0 0.9375rem;
+}
+
+.page-addresses .addresses-footer a span {
+  margin-top: 0.625rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.page-addresses .address {
+  margin-bottom: 1.875rem;
+  font-size: 0.875rem;
+  background: #fff;
+}
+
+.page-addresses .address .address-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+/* Style Glassmorphism pour les blocs d'adresses */
+.address {
+  border-radius: var(--radius-primary);
+  box-shadow: var(--shadow-glass);
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  margin-bottom: 1rem;
+  font-style: var(--font-family-monospace);
+  color: var(--text-contrast);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.page-addresses .address .address-body address {
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 5rem;
+  color: var(--text-dark);
+}
+
+.address:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.address-footer a:hover {
+  text-shadow: 0 0 10px var(--neon-pink);
+  transform: scale(1.05);
+}
+
+.page-addresses .addresses-footer a span {
+  font-weight: bold;
+  color: var(--text-dark);
+  transition: all 0.3s, transform 0.3s;
+}
+
+/* Style pour le pied de page des adresses */
+.addresses-footer a {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-glass-mid);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-primary);
+  color: var(--neon-green);
+  text-decoration: none;
+  border: 2px solid var(--neon-green);
+  transition: all 0.3s;
+}
+
+/* Effet néon pour les titres et liens */
+.address h4,
+.address a {
+  color: var(--text-dark);
+  text-shadow: 0 0 8px var(--neon-blue);
+}
+
+.page-addresses .address .address-footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #7a7a7a;
+}
+.page-addresses .address .address-footer a {
+  margin-right: 0.5rem;
+}
+.page-addresses .address .address-footer a span {
+  font-size: 0.9375rem;
+  vertical-align: middle;
+}
+.page-addresses .addresses-footer {
+  margin: 0 0.9375rem;
+}
+
+.page-addresses .addresses-footer a span {
+  font-size: 1rem;
+  color: var(--text-contrast);
+}
+
+.login-form {
+  margin-top: 15px;
+}
+.forgotten-password {
+  padding: 4px;
+}
+.forgotten-password .form-fields .center-email-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .forgotten-password .form-fields .center-email-fields {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .forgotten-password .form-fields .center-email-fields button {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+}
+.forgotten-password .form-fields .center-email-fields button {
+  height: 38px;
+}
+.forgotten-password .form-fields .email {
+  width: 430px;
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (max-width: 767px) {
+  .forgotten-password .form-fields .email {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.forgotten-password .form-fields .email input {
+  height: 38px;
+}
+.forgotten-password .form-fields label.required {
+  width: 130px;
+}
+.send-renew-password-link {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.renew-password {
+  margin-left: 10px;
+}
+.renew-password .email {
+  padding-bottom: 30px;
+}
+.renew-password [type="submit"] {
+  margin-left: 50px;
+}
+#identity .radio-inline .custom-radio,
+#authentication .radio-inline .custom-radio {
+  margin-right: 0;
+}
+
+#authentication .tooltip.tooltip-bottom {
+  padding: 0;
+  margin: 0;
+}
+#authentication .custom-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#authentication .custom-checkbox span {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 0.9375rem;
+  flex: 0 0 0.9375rem;
+}
+#authentication .custom-checkbox label {
+  padding-left: 0.625rem;
+}
+#identity .radio-inline,
+#authentication .radio-inline {
+  padding: 0;
+}
+
+.page-customer-account #content {
+  padding: 1rem;
+  background: #fff;
+  font-size: 0.875rem;
+  
+}
+.page-customer-account #content .order-actions a {
+  padding: 0 0.125rem;
+}
+.page-customer-account #content .forgot-password {
+  padding-bottom: 0.9375rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+.page-customer-account #content .no-account {
+  font-size: 1rem;
+  text-align: center;
+}
+.page-authentication #content {
+  padding: 1rem;
+  background: #fff;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.send-renew-password-link {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.renew-password {
+  margin-left: 10px;
+}
+.renew-password .email {
+  padding-bottom: 30px;
+}
+.renew-password [type="submit"] {
+  margin-left: 50px;
 }

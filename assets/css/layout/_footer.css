@@ -35,7 +35,13 @@
   text-shadow: 0 0 10px var(--neon-blue);
   align-self: center;
 }
-
+.footer-container li {
+  margin-bottom: 0.3125rem;
+}
+.footer-container {
+  padding-top: 2.5rem;
+  overflow: hidden;
+}
 /* Section mon compte */
 .footer-container #block_myaccount_infos .myaccount-title a {
   color: var(--neon-blue) !important;
@@ -101,6 +107,7 @@ p.text-sm-center {
 
 #footer .block_newsletter p {
   text-shadow: none;
+  padding-top: 1.5rem;
 }
 
 #footer .block_newsletter form input[type="email"] {
@@ -115,6 +122,112 @@ p.text-sm-center {
   color: var(--text-light) !important;
   text-shadow: none !important;
 }
+#footer .block_newsletter #block-newsletter-label {
+  padding-top: 0;
+}
+#footer {
+  padding-top: 2.5rem;
+}
 
+.sitemap-title {
+  text-transform: capitalize;
+}
+.sitemap {
+  margin-top: 0.9375rem;
+}
+.sitemap h2 {
+  width: 100%;
+  height: 35px;
+  margin-left: -15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  
+  text-transform: uppercase;
+  border-bottom: 1px solid #7a7a7a;
+}
+.sitemap ul {
+  margin-top: 20px;
+  margin-left: -15px;
+}
+.sitemap ul.nested {
+  margin-left: 20px;
+}
+.sitemap ul li {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+@media (max-width: 575px) {
+  .sitemap {
+    margin-top: 0;
+  }
+}
+.block_newsletter {
+  float: inherit;
+  width: 100%;
+  max-width: 50rem;
+  margin: auto;
+  margin-bottom: 0.625rem;
+  clear: both;
+  font-size: 0.875rem;
+  background: #fff;
+}
+.block_newsletter form {
+  position: relative;
+}
+.block_newsletter form input[type="text"] {
+  min-width: 255px;
+  padding: 10px;
+  color: #7a7a7a;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.block_newsletter form input[type="text"]:focus {
+  
+  background: #fff;
+  outline: 3px #24b9d7 solid;
+}
+.block_newsletter form input[type="text"]:focus + button .search {
+  color: #24b9d7;
+}
+.block_newsletter form button[type="submit"] {
+  position: absolute;
+  right: 0.125rem;
+  bottom: 0.3125rem;
+  background: none;
+  border: none;
+}
+.block_newsletter form button[type="submit"] .search:hover {
+  color: #24b9d7;
+}
+.block_newsletter #block-newsletter-label {
+  font-size: 1.3125rem;
+  line-height: 1.75rem;
+}
+.block_newsletter form .input-wrapper {
+  overflow: hidden;
+}
 
+.block_newsletter
+  form
+  .row
+  .col-xs-12:first-of-type
+  .btn-primary:first-of-type {
+  margin-left: 0.5rem;
+}
+.block_newsletter form input[type="email"] {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+.block_newsletter form input[type="email"]:focus {
+  padding: 8px 8px 9px;
+  border: 3px #24b9d7 solid;
+  outline: 0;
+}
+.block_newsletter form input {
+  box-shadow: none;
+}
 
+#footer .block_newsletter #block-newsletter-label {
+  padding-top: 0;
+}
