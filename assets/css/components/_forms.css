@@ -28,7 +28,7 @@ select {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--neon-blue) !important;
   border-radius: 10px !important;
-  color: var(--text-contrast);
+  color: #7a7a7a;
   padding: 12px 15px !important;
   backdrop-filter: blur(10px);
 }
@@ -119,18 +119,6 @@ textarea:disabled {
   ) !important; /* o un var(--bg-disabled) dedicato */
   opacity: 0.7;
   cursor: not-allowed;
-}
-
-/* ===== BOTTONI / VARIE ===== */
-#customer-form .btn-primary:hover {
-  box-shadow: 0 0 25px var(--neon-blue);
-  transform: translateY(-2px);
-}
-.btn-show {
-  box-shadow: none !important;
-  border-radius: 10px;
-  line-height: 1.8 !important;
-  margin-left: 5px !important;
 }
 
 /* ===== VALIDAZIONE (attenzione: nasconde i messaggi) ===== */
@@ -235,7 +223,7 @@ form section .form-informations-option {
 form .form-control-label {
   font-size: 0.875rem;
   font-weight: 700;
-  
+  color: var(--text-contrast);
 }
 .custom-radio {
   position: relative;
@@ -322,11 +310,7 @@ form section .form-informations-option {
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
-form .form-control-label {
-  font-size: 0.875rem;
-  font-weight: 700;
-  
-}
+
 .custom-radio {
   position: relative;
   display: inline-block;

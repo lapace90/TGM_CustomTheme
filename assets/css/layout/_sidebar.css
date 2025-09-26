@@ -33,6 +33,7 @@
 
 #search_filters .facet .facet-title {
   text-shadow: none;
+  color: var(--bg-secondary);
 }
 
 /* Magnitude */
@@ -65,11 +66,9 @@
 .products-selection .sort-by-row .sort-by {
   margin-top: 20px;
   font-size: 1.1rem;
-  
 }
 
 .pagination > div:first-child {
   color: var(--bg-secondary) !important;
-
 }
 

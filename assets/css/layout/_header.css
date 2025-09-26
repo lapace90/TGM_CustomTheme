@@ -44,7 +44,7 @@
   display: flex !important;
   align-items: center !important;
   padding: 0 !important;
-  margin-left: .9375rem;
+  margin-left: 0.9375rem;
   text-align: center;
   white-space: nowrap;
 }
@@ -95,33 +95,33 @@
 
 /* Menu principale */
 .top-menu {
-    position: relative;
+  position: relative;
 }
 
 /* Ogni elemento li deve essere relativo */
 .top-menu > li {
-    position: relative !important;
-    display: inline-block;
+  position: relative !important;
+  display: inline-block;
 }
 
 /* Dropdown posizionato sotto ogni link */
 .top-menu .popover.sub-menu {
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    max-width: fit-content !important;
-    width: fit-content !important;
-    z-index: 9999 !important;
-    margin-top: 0 !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  max-width: fit-content !important;
+  width: fit-content !important;
+  z-index: 9999 !important;
+  margin-top: 0 !important;
 }
 
 /* Per sottomenu di secondo livello */
 .top-menu .popover.sub-menu .popover.sub-menu {
-    top: 0 !important;
-    left: 100% !important;
+  top: 0 !important;
+  left: 100% !important;
 }
 
- .header-top .theme-switch-wrapper,
+.header-top .theme-switch-wrapper,
 .header-nav .theme-switch-wrapper {
   margin-left: auto;
   padding: 10px;
@@ -148,10 +148,7 @@
 #header .menu > ul > li {
   display: inline-block;
 }
-#header .header-nav {
-  max-height: 50px;
-  border-bottom: #f6f6f6 2px solid;
-}
+
 #header .header-nav #menu-icon {
   margin: 0 1rem;
   vertical-align: middle;
@@ -278,11 +275,6 @@
   }
 }
 
-#header .header-nav {
-  max-height: 50px;
-  border-bottom: #f6f6f6 2px solid;
-  border-top: 1px solid var(--glass-border);
-}
 .header-top {
   background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
   padding: 5px 0;
@@ -302,9 +294,7 @@
   color: var(--neon-blue) !important;
   text-shadow: 0 0 10px var(--neon-blue);
 }
-#header .header-nav {
-  height: 75px;
-}
+
 #header .header-nav .blockcart {
   background: transparent;
   backdrop-filter: blur(15px);

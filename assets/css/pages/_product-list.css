@@ -84,17 +84,19 @@
 
 .quickview .modal-content {
   min-height: 28.13rem;
-  background: var(--bg-glass-light, #f6f6f6);
   border: 1px solid var(--glass-border, rgba(122,122,122,.15));
   border-radius: var(--radius-primary);
   box-shadow: var(--shadow-glass);
   overflow: hidden;
 }
+.quickview .modal-content >  h1.h1 {
+  color: #232323;
+}
+
 
 .quickview .modal-header {
   padding: 0.625rem;
   border: none;
-  background: transparent;
 }
 
 .quickview .modal-body { min-height: 23.75rem; }
@@ -300,7 +302,6 @@
   text-align: center;
   font-size: 20px;
   line-height: 32px;
-  color: #6b868f;
 }
 #product-comments-list-pagination ul li.active span,
 #product-comments-list-pagination ul li span.next i,
@@ -318,13 +319,23 @@
   display: none;
 }
 
-/* (déduplication) — icônes data-icon */
-.product-comment-modal .material-icons[data-icon]:before,
-.product-comment-list-item .material-icons[data-icon]:before,
-.product-comments-additional-info .material-icons[data-icon]:before,
-#product-comments-list-header .material-icons[data-icon]:before,
-#product-comments-list-footer .material-icons[data-icon]:before {
-  content: attr(data-icon);
+.product-comments-additional-info {
+  margin: 20px 0;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.product-comments-additional-info .link-comment.post-product-comment {
+  border-left: 1px solid #979797;
+  padding-left: 12px;
+  margin-left: 12px;
+}
+.product-comments-additional-info .comments-note {
+  margin-right: 30px;
+  margin-bottom: 20px;
 }
 
 /* footer responsif (déduplication) */
@@ -399,7 +410,6 @@
 }
 .product-comment-list-item .comment-infos {
   height: 19px;
-  color: #6b868f;
   font-size: 14px;
   letter-spacing: -0.28px;
   line-height: 19px;
@@ -410,14 +420,12 @@
 }
 .product-comment-list-item .comment-content .h4 {
   height: 22px;
-  color: #363a41;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.32px;
   line-height: 22px;
 }
 .product-comment-list-item .comment-content p {
-  color: #363a42;
   font-size: 14px;
   letter-spacing: -0.28px;
   line-height: 19px;
@@ -425,7 +433,6 @@
   white-space: pre-wrap;
 }
 .product-comment-list-item .comment-content .comment-buttons a {
-  color: #6b868f;
   font-size: 14px;
   letter-spacing: -0.28px;
   line-height: 19px;

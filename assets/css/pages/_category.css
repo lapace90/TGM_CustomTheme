@@ -51,6 +51,7 @@
 .block-category h1 {
   margin-bottom: 1rem;
   font-size: 2rem;
+  color: var(--text-primary);
 }
 .block-category .block-category-inner {
   display: -webkit-box;
@@ -202,10 +203,11 @@
   vertical-align: top;
 }
 #subcategories ul li .subcategory-name {
+  color: #24b9d7;
   text-transform: uppercase;
 }
 #subcategories ul li .subcategory-name:hover {
-  color: #24b9d7;
+  color: var(--neon-blue);
 }
 #subcategories ul li .cat_desc {
   display: none;

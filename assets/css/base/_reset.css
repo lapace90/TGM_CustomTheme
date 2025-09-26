@@ -70,6 +70,7 @@ body #wrapper {
 
 .page-content {
   padding: 20px;
+  margin-top: 1.5rem;
 
   border-radius: var(--radius-primary);
   box-shadow: var(--shadow-glass);
@@ -2342,6 +2343,10 @@ tbody.collapse.in {
   .hidden-sm-up {
     display: none !important;
   }
+}
+ul {
+  padding-left: 0;
+  list-style: none;
 }
 .invisible {
   visibility: hidden !important;

@@ -297,7 +297,7 @@
   backdrop-filter: blur(10px);
   margin-bottom: 1rem;
   font-style: var(--font-family-monospace);
-  color: var(--text-contrast);
+  color: var(--text-secondary);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -450,12 +450,7 @@
   padding: 0;
 }
 
-.page-customer-account #content {
-  padding: 1rem;
-  background: #fff;
-  font-size: 0.875rem;
-  
-}
+
 .page-customer-account #content .order-actions a {
   padding: 0 0.125rem;
 }

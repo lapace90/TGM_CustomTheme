@@ -29,7 +29,7 @@
 /* Informations du produit */
 .product-information {
   background-color: var(--bg-glass);
-  color: var(--text-contrast);
+  color: grey;
   margin-top: 1rem;
   padding: 1.2rem;
   border-radius: var(--radius-primary);
@@ -49,9 +49,8 @@ h1.product-title {
   font-size: 1.5em;
   font-weight: 700;
   color: var(--neon-blue);
-  text-shadow: 0 0 10px var(--neon-blue);
   animation: glow 2s infinite alternate;
-    margin: .8rem;
+  margin: 1.5rem;
 }
 
 /* Description du produit */
@@ -117,17 +116,13 @@ h1.product-title {
   width: 40px;
 }
 
-.product-prices div {
-  margin-bottom: 0 !important;
-}
-
 .current-price-value {
   font-size: 2rem !important;
 }
 
 [data-theme="light"] .current-price-value {
-  color: var(--text-primary) !important;
-  text-shadow: var(--neon-blue) 0 0 3px !important;
+  color: var(--text-secondary) !important;
+  text-shadow: #fff 0 0 3px !important;
 }
 
 .tabs {
@@ -151,7 +146,7 @@ h1.product-title {
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
-} 
+}
 
 .blockreassurance {
   padding-top: 10px;
@@ -248,7 +243,6 @@ h1.product-title {
 .social-sharing li a:hover {
   color: transparent;
 }
-
 
 #manufacturer #main ul {
   display: -webkit-box;
